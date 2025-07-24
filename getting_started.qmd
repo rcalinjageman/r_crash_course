@@ -1,0 +1,33 @@
+---
+title: "Getting started"
+---
+
+To get started with this course, we need everyone to have access to a common set of tools. Please follow these steps carefully and use the links I've provided to report back your progress to me.
+
+# Posit.Cloud account
+
+Your first step is to sign up for a **free** account with Posit.Cloud: <https://posit.cloud/plans/free>
+
+**Please user your @dom.edu email when signing up for Posit.Cloud to make it easier for me to add you to the class.**
+
+Posit.Cloud allows you to write, run, and explore R programs without having to install R or R studio on your computer – you access everything through your browser. We'll use it throughout this class so that we can all have the same experience regardless of what type of device you are using.
+
+Once you have created your Posit.Cloud account, please enter your account information here so I can add you to our class: <https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing>
+
+# GitHub account
+
+Your next step is to sign up for a **free** GitHub account: <https://github.com/>
+
+**For this account, you might *not*** **want to use your @dom.edu email because it will be de-activated after you graduate. You'll likely want to keep your GitHub account and any projects you create throughout your life**.
+
+Once you have created your GitHub account, record your account username for me here so I can help you link it to your Posit.Cloud account: <https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing>
+
+# (Optional) Install R and R Studio on Your Own Device
+
+Posit.Cloud is a really convenient way to get started with R but it has some limitations: the free account quickly runs into limitations, and it is also harder to get data into and out of the Posit.Cloud environment.
+
+Therefore, I strongly reccomend getting R and R Studio setup on your own device. It's free and easy, but you don't have to do this – we will work this week in Posit.Cloud rather than with your local installs.
+
+Basic instructions for installing R and R studio are here: <https://posit.co/download/rstudio-desktop/>
+
+And there is a video of this process here: <https://libguides.wustl.edu/c.php?g=385216&p=2612134>

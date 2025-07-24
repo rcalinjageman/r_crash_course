@@ -2,17 +2,34 @@ project:
   type: website
 
 website:
-  title: "r_crash_course"
-  navbar:
-    left:
+  title: "DU-RCC"
+  sidebar:
+    logo: '/resources/logo.png'
+    style: docked
+    search: true
+    pinned: true
+    contents:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: getting_started.qmd
+        text: Getting started
+      - href: day_1.qmd
+        text: Day 1
+      - href: day_2.qmd
+        text: Day 2
+      - href: day_3.qmd
+        text: Day 3
+      - href: day_4.qmd
+        text: Day 4
+      - href: day_5.qmd
+        text: Day 5
+      - href: resources.qmd
+        text: Resources
 
 format:
   html:
     theme:
-      - cosmo
+      - morph
       - brand
     css: styles.css
     toc: true

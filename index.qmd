@@ -1,11 +1,7 @@
 ---
-title: "r_crash_course"
+title: "DU's 1-Week Crash Course in R"
 ---
 
-This is a Quarto website.
+Welcome!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+This is a 1-week crash course on Data Science using R, the statistical programming language.  We’ll work through the basic workflow of a data science project in R, learning the fundamentals for importing, tidying, transforming, and visualizing data.  We’ll especially emphasize how to find reliable help for R so that you can continue growing in your skills after the course.  You’ll also develop your own project using Quarto and a data source that interests you.   Students who complete this course will gain basic confidence and proficiency in using R and the RStudio environment, creating reports in Quarto, and finding help for coding new projects. 

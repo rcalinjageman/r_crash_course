@@ -1,9 +1,32 @@
 [
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Tools\n\nPosit.Cloud: https://posit.cloud/plans/free\nGithub: https://github.com/\nGet R and RStudio for your own device: https://posit.co/download/rstudio-desktop/\n\nExcellent Free Books/Courses\n\nR For Data Science by Hadley Wickham, Mine Cetinkaya-Rundel & Garrett Grolemund : https://r4ds.hadley.nz/\n\nThis will be our main textbook for the course. It is a free e-book in its 2nd edition written by the folks who know R best\n\nThe education wing of the RStudio team has links to fantastic resources: https://education.rstudio.com/learn/beginner/\nQuick primers on different tasks in R: https://posit.cloud/learn/recipes",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "getting_started.html",
+    "href": "getting_started.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "To get started with this course, we need everyone to have access to a common set of tools. Please follow these steps carefully and use the links I’ve provided to report back your progress to me.\n\nPosit.Cloud account\nYour first step is to sign up for a free account with Posit.Cloud: https://posit.cloud/plans/free\nPlease user your @dom.edu email when signing up for Posit.Cloud to make it easier for me to add you to the class.\nPosit.Cloud allows you to write, run, and explore R programs without having to install R or R studio on your computer – you access everything through your browser. We’ll use it throughout this class so that we can all have the same experience regardless of what type of device you are using.\nOnce you have created your Posit.Cloud account, please enter your account information here so I can add you to our class: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing\n\n\nGitHub account\nYour next step is to sign up for a free GitHub account: https://github.com/\nFor this account, you might not want to use your @dom.edu email because it will be de-activated after you graduate. You’ll likely want to keep your GitHub account and any projects you create throughout your life.\nOnce you have created your GitHub account, record your account username for me here so I can help you link it to your Posit.Cloud account: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing\n\n\n(Optional) Install R and R Studio on Your Own Device\nPosit.Cloud is a really convenient way to get started with R but it has some limitations: the free account quickly runs into limitations, and it is also harder to get data into and out of the Posit.Cloud environment.\nTherefore, I strongly reccomend getting R and R Studio setup on your own device. It’s free and easy, but you don’t have to do this – we will work this week in Posit.Cloud rather than with your local installs.\nBasic instructions for installing R and R studio are here: https://posit.co/download/rstudio-desktop/\nAnd there is a video of this process here: https://libguides.wustl.edu/c.php?g=385216&p=2612134",
+    "crumbs": [
+      "Getting started"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "r_crash_course",
+    "title": "DU’s 1-Week Crash Course in R",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome!\nThis is a 1-week crash course on Data Science using R, the statistical programming language.  We’ll work through the basic workflow of a data science project in R, learning the fundamentals for importing, tidying, transforming, and visualizing data.  We’ll especially emphasize how to find reliable help for R so that you can continue growing in your skills after the course.  You’ll also develop your own project using Quarto and a data source that interests you.   Students who complete this course will gain basic confidence and proficiency in using R and the RStudio environment, creating reports in Quarto, and finding help for coding new projects.",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]

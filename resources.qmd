@@ -1,0 +1,21 @@
+---
+title: "Resources"
+---
+
+Tools
+
+-   Posit.Cloud: <https://posit.cloud/plans/free>
+
+-   Github: <https://github.com/>
+
+-   Get R and RStudio for your own device: <https://posit.co/download/rstudio-desktop/>
+
+Excellent Free Books/Courses
+
+-   *R For Data Science* by Hadley Wickham, Mine Cetinkaya-Rundel & Garrett Grolemund : <https://r4ds.hadley.nz/>
+
+    -   This will be our main textbook for the course. It is a free e-book in its 2nd edition written by the folks who know R best
+
+-   The education wing of the RStudio team has links to fantastic resources: <https://education.rstudio.com/learn/beginner/>
+
+-   Quick primers on different tasks in R: <https://posit.cloud/learn/recipes>
