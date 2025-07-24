@@ -3,6 +3,7 @@ project:
 
 website:
   title: "DU-RCC"
+  output-dir: docs
   sidebar:
     logo: '/resources/logo.png'
     style: docked
