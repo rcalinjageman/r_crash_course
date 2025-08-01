@@ -1,3 +1,17 @@
 ---
 title: "Day 1"
 ---
+
+# Why learn R?
+
+R is a programming language. Learning R is like learning any other language: you need to dive into to trying to use it, stumble around a lot, and keep going until using it begins to seem like second nature. When you learn another spoken language, you depend heavily on other speakers and on resources, and you will often find yourself asking "*How do you say?"* or "*What does \_\_- mean?*". The same with learning a programming language like R – you'll find that Google and other programmers will be your constant companions in finding your feet.
+
+Before we dive in, let's ask ourselves: why bother?
+
+## Asking questions of data
+
+R is a language specialized for processing, summarizing, and visualizing *data*. It is a programming language that can help *ask questions of data*, hopefully enabling us to draw wise conclusions from the patterns we observe.
+
+This makes R a bit more difficult
+
+# 
