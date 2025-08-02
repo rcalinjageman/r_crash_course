@@ -49,7 +49,7 @@ book:
 format:
   html:
     theme:
-      - morph
+      - cosmo
       - r4ds.scss
     code-link: true
     callout-appearance: simple

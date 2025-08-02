@@ -87,6 +87,11 @@ download.file("https://github.com/rcalinjageman/r_crash_course/raw/refs/heads/ma
 eammi2 <- read.csv("EAMMi2-CleanData.csv")
 ```
 
+```{r}
+#| include: false
+file.remove("EAMMi2-CleanData.csv")
+```
+
 ## First steps
 
 Does being mindful correlate with being a happier person? Does lots of social media correlate with being less happy? Are these relationships different depending on the gender soeone identifies with? Let's create visualizations that we can use to answer these questions.
@@ -107,11 +112,9 @@ To make the discussion easier, let's define some terms:
 
 In this context, a variable refers to an attribute of all the college students, and an observation refers to all the attributes of a single college student.
 
-Type the name of the data frame in the console and R will print a preview of its contents.
+The head function lets you view the first few rows of a dataframe:.
 
-```{r}
-eammi2
-```
+head(eammi2)
 
 This data frame contains `r ncol(eammi2)` columns. In RStudio, run `View(eammi2)` to open an interactive data viewer.
 
@@ -593,7 +596,7 @@ You will learn about many other geoms for visualizing distributions of variables
 
 ### Exercises
 
-1.  The `mpg` data frame that is bundled with the ggplot2 package contains `r nrow(mpg)` observations collected by the US Environmental Protection Agency on `r mpg |> distinct(model) |> nrow()` car models. Which variables in `mpg` are categorical? Which variables are numerical? (Hint: Type `?mpg` to read the documentation for the dataset.) How can you see this information when you run `mpg`?
+1.  The `mpg` data frame that is bundled with the ggplot2 package contains `r nrow(mpg)` observations collected by the US Environmental Protection Agency on 38 car models. Which variables in `mpg` are categorical? Which variables are numerical? (Hint: Type `?mpg` to read the documentation for the dataset.) How can you see this information when you run `mpg`?
 
 2.  Make a scatterplot of `hwy` vs. `displ` using the `mpg` data frame. Next, map a third, numerical variable to `color`, then `size`, then both `color` and `size`, then `shape`. How do these aesthetics behave differently for categorical vs. numerical variables?
 
