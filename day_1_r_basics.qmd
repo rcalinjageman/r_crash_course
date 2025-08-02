@@ -1,0 +1,3 @@
+# R Basics {#sec-day-1-r-basics}
+
+We're going to jump right into making our first graph. This won't all make perfect sense at first, but that's ok... the only way to get started is to dive right in.

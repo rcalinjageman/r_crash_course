@@ -1,7 +1,7 @@
----
-title: "DU's 1-Week Crash Course in R"
----
+# Welcome {.unnumbered}
 
-Welcome!
+Howdy!
 
 This is a 1-week crash course on Data Science using R, the statistical programming language.  We’ll work through the basic workflow of a data science project in R, learning the fundamentals for importing, tidying, transforming, and visualizing data.  We’ll especially emphasize how to find reliable help for R so that you can continue growing in your skills after the course.  You’ll also develop your own project using Quarto and a data source that interests you.   Students who complete this course will gain basic confidence and proficiency in using R and the RStudio environment, creating reports in Quarto, and finding help for coding new projects. 
+
+Much of this course is adapted directly from *R for Data Science (2nd edition)* by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. You can find this free online book here: <https://r4ds.hadley.nz/> and its source code here: <https://github.com/hadley/r4ds>

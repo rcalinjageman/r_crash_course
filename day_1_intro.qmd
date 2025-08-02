@@ -1,0 +1,27 @@
+# Intro {#sec-day-1-intro}
+
+## Introductions
+
+Let's get to know each other.
+
+## Why learn R?
+
+R is a programming language. Learning R is like learning any other language: you need to dive into to trying to use it, stumble around a lot, and keep going until using it begins to seem like second nature. When you learn another spoken language, you depend heavily on outside help, and you will often find yourself asking "*How do you say?"* or "*What does \_\_- mean?*". The same is true when learning a programming language like R – you'll find that Google and other programmers will be your constant companions in finding your feet.
+
+Before we dive in, let's ask ourselves: why bother?
+
+R is a language specialized for processing, summarizing, and visualizing *data*. It is a programming language that can help *ask questions of data*, hopefully enabling us to draw wise conclusions from the patterns we observe.
+
+In some ways, this makes learning R more difficult than learning other programming languages: we are not just learning *R*, we are learning how to be good data scientists. On the other hand, this makes learning R more useful than most programming languages – even if we change languages or tools you will still be gaining experience asking and answering questions from data.
+
+It's worth pausing for a moment to discuss:
+
+-   What are some examples of asking/answering questions of data in our society?
+
+-   What professions leverage data regularly?
+
+-   What, specifically, attracts you to learning these skills?
+
+## Some credit where credit is due
+
+As we prepare to dive in, it is worth reiterating that the materials for this course were adapted directly from *R for Data Science (2nd edition)* by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. You can find this free online book here: <https://r4ds.hadley.nz/> and its source code here: <https://github.com/hadley/r4ds>

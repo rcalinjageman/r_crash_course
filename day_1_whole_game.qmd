@@ -1,0 +1,37 @@
+# Whole Game {#sec-day-1-whole-game}
+
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+```
+
+```{r}
+#| label: fig-ds-whole-game 
+#| echo: false
+#| out.width: NULL
+#| fig-cap: |
+#|   In this section of the book, you'll learn how to import,
+#|   tidy, transform, and visualize data.
+#| fig-alt: |
+#|   A diagram displaying the data science cycle: Import -> Tidy ->
+#|   Understand  (which has the phases Transform -> Visualize -> Model in a
+#|   cycle) -> Communicate. Surrounding all of these is Program 
+#|   Import, Tidy, Transform, and Visualize is highlighted.
+knitr::include_graphics("diagrams/data-science/whole-game.png", dpi = 270)
+```
+
+The @fig-ds-whole-game presents the basic process of asking and answering questions from data:
+
+-   **importing** - getting the data into your computer's memory
+-   **tidying** - cleaning up the data, getting it in a format and form that is valid and machine-readable
+-   **transforming** - making calculations from the data, deriving new measures from the data (e.g. %percent change)
+-   **visualizing** - making images that help you *see* the patterns in the data so that you can begin to draw conclusions
+-   **modeling** - as you see/explore the data you begin to develop mental or even mathematical models of what is happening with the data (e.g. the drug we're studying is improving muscle density but causing respiratory side effects)
+-   **communicating** - we package up and present our work for others to be able to evaluate our claims and judge for themselves
+
+This process is iterative (meaning you go through it repeatedly, making adjustments each time). No data project is ever really finished -- you might learn more about your data, gather more data, discover a new technique for presenting/clarifying your data, present to another audience... good work with data lives on and continues to evolve! For that reason, it is important in your journey to learn how to organize your projects in ways that lets you and others easily understand and update them.
+
+In this class, we're going to try to quickly build the tools to work through this data-cycle process using R.
+
+You won't become an fluent R programmer data scientist in 1 week, but you can certainly get a long way on your journey to proficiency!

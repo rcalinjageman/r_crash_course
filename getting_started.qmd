@@ -1,10 +1,8 @@
----
-title: "Getting started"
----
+# Getting Started {#sec-getting-started .unnumbered}
 
 To get started with this course, we need everyone to have access to a common set of tools. Please follow these steps carefully and use the links I've provided to report back your progress to me.
 
-# Posit.Cloud account
+## Posit.Cloud account
 
 Your first step is to sign up for a **free** account with Posit.Cloud: <https://posit.cloud/plans/free>
 
@@ -14,7 +12,7 @@ Posit.Cloud allows you to write, run, and explore R programs without having to i
 
 Once you have created your Posit.Cloud account, please enter your account information here so I can add you to our class: <https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing>
 
-# GitHub account
+## GitHub account
 
 Your next step is to sign up for a **free** GitHub account: <https://github.com/>
 
@@ -22,7 +20,7 @@ Your next step is to sign up for a **free** GitHub account: <https://github.com/
 
 Once you have created your GitHub account, record your account username for me here so I can help you link it to your Posit.Cloud account: <https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing>
 
-# (Optional) Install R and R Studio on Your Own Device
+## (Optional) Install R and R Studio on Your Own Device
 
 Posit.Cloud is a really convenient way to get started with R but it has some limitations: the free account quickly runs into limitations, and it is also harder to get data into and out of the Posit.Cloud environment.
 

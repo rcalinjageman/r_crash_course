@@ -1,32 +1,261 @@
 [
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DU-RCC",
     "section": "",
-    "text": "Tools\n\nPosit.Cloud: https://posit.cloud/plans/free\nGithub: https://github.com/\nGet R and RStudio for your own device: https://posit.co/download/rstudio-desktop/\n\nExcellent Free Books/Courses\n\nR For Data Science by Hadley Wickham, Mine Cetinkaya-Rundel & Garrett Grolemund : https://r4ds.hadley.nz/\n\nThis will be our main textbook for the course. It is a free e-book in its 2nd edition written by the folks who know R best\n\nThe education wing of the RStudio team has links to fantastic resources: https://education.rstudio.com/learn/beginner/\nQuick primers on different tasks in R: https://posit.cloud/learn/recipes",
+    "text": "Welcome\nHowdy!\nThis is a 1-week crash course on Data Science using R, the statistical programming language.  We’ll work through the basic workflow of a data science project in R, learning the fundamentals for importing, tidying, transforming, and visualizing data.  We’ll especially emphasize how to find reliable help for R so that you can continue growing in your skills after the course.  You’ll also develop your own project using Quarto and a data source that interests you.   Students who complete this course will gain basic confidence and proficiency in using R and the RStudio environment, creating reports in Quarto, and finding help for coding new projects. \nMuch of this course is adapted directly from R for Data Science (2nd edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. You can find this free online book here: https://r4ds.hadley.nz/ and its source code here: https://github.com/hadley/r4ds",
     "crumbs": [
-      "Resources"
+      "Welcome"
     ]
   },
   {
     "objectID": "getting_started.html",
     "href": "getting_started.html",
-    "title": "Getting started",
+    "title": "Getting Started",
     "section": "",
-    "text": "To get started with this course, we need everyone to have access to a common set of tools. Please follow these steps carefully and use the links I’ve provided to report back your progress to me.\n\nPosit.Cloud account\nYour first step is to sign up for a free account with Posit.Cloud: https://posit.cloud/plans/free\nPlease user your @dom.edu email when signing up for Posit.Cloud to make it easier for me to add you to the class.\nPosit.Cloud allows you to write, run, and explore R programs without having to install R or R studio on your computer – you access everything through your browser. We’ll use it throughout this class so that we can all have the same experience regardless of what type of device you are using.\nOnce you have created your Posit.Cloud account, please enter your account information here so I can add you to our class: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing\n\n\nGitHub account\nYour next step is to sign up for a free GitHub account: https://github.com/\nFor this account, you might not want to use your @dom.edu email because it will be de-activated after you graduate. You’ll likely want to keep your GitHub account and any projects you create throughout your life.\nOnce you have created your GitHub account, record your account username for me here so I can help you link it to your Posit.Cloud account: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing\n\n\n(Optional) Install R and R Studio on Your Own Device\nPosit.Cloud is a really convenient way to get started with R but it has some limitations: the free account quickly runs into limitations, and it is also harder to get data into and out of the Posit.Cloud environment.\nTherefore, I strongly reccomend getting R and R Studio setup on your own device. It’s free and easy, but you don’t have to do this – we will work this week in Posit.Cloud rather than with your local installs.\nBasic instructions for installing R and R studio are here: https://posit.co/download/rstudio-desktop/\nAnd there is a video of this process here: https://libguides.wustl.edu/c.php?g=385216&p=2612134",
+    "text": "Posit.Cloud account\nTo get started with this course, we need everyone to have access to a common set of tools. Please follow these steps carefully and use the links I’ve provided to report back your progress to me.\nYour first step is to sign up for a free account with Posit.Cloud: https://posit.cloud/plans/free\nPlease user your @dom.edu email when signing up for Posit.Cloud to make it easier for me to add you to the class.\nPosit.Cloud allows you to write, run, and explore R programs without having to install R or R studio on your computer – you access everything through your browser. We’ll use it throughout this class so that we can all have the same experience regardless of what type of device you are using.\nOnce you have created your Posit.Cloud account, please enter your account information here so I can add you to our class: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing",
     "crumbs": [
-      "Getting started"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DU’s 1-Week Crash Course in R",
-    "section": "",
-    "text": "Welcome!\nThis is a 1-week crash course on Data Science using R, the statistical programming language.  We’ll work through the basic workflow of a data science project in R, learning the fundamentals for importing, tidying, transforming, and visualizing data.  We’ll especially emphasize how to find reliable help for R so that you can continue growing in your skills after the course.  You’ll also develop your own project using Quarto and a data source that interests you.   Students who complete this course will gain basic confidence and proficiency in using R and the RStudio environment, creating reports in Quarto, and finding help for coding new projects.",
+    "objectID": "getting_started.html#github-account",
+    "href": "getting_started.html#github-account",
+    "title": "Getting Started",
+    "section": "GitHub account",
+    "text": "GitHub account\nYour next step is to sign up for a free GitHub account: https://github.com/\nFor this account, you might not want to use your @dom.edu email because it will be de-activated after you graduate. You’ll likely want to keep your GitHub account and any projects you create throughout your life.\nOnce you have created your GitHub account, record your account username for me here so I can help you link it to your Posit.Cloud account: https://docs.google.com/spreadsheets/d/1d4Wv9NFqqPDtpRR1N5L0H0gv3LHdNX_dpFWqgRykXCY/edit?usp=sharing",
     "crumbs": [
-      "Home"
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#optional-install-r-and-r-studio-on-your-own-device",
+    "href": "getting_started.html#optional-install-r-and-r-studio-on-your-own-device",
+    "title": "Getting Started",
+    "section": "(Optional) Install R and R Studio on Your Own Device",
+    "text": "(Optional) Install R and R Studio on Your Own Device\nPosit.Cloud is a really convenient way to get started with R but it has some limitations: the free account quickly runs into limitations, and it is also harder to get data into and out of the Posit.Cloud environment.\nTherefore, I strongly reccomend getting R and R Studio setup on your own device. It’s free and easy, but you don’t have to do this – we will work this week in Posit.Cloud rather than with your local installs.\nBasic instructions for installing R and R studio are here: https://posit.co/download/rstudio-desktop/\nAnd there is a video of this process here: https://libguides.wustl.edu/c.php?g=385216&p=2612134",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "day_1.html",
+    "href": "day_1.html",
+    "title": "Day 1",
+    "section": "",
+    "text": "It’s day 1! Excitement is high. Here’s the plan for today:\n\nGet to know each other\nWhy learn R and data science?\nJump in - first graph\nCoding basics\nAssignments\n\nWe’re assuming that everyone has created their Posit.Cloud account and their Github Account. If not, please check out the instructions on the ?sec-getting-started page.",
+    "crumbs": [
+      "Day 1"
+    ]
+  },
+  {
+    "objectID": "day_1_intro.html",
+    "href": "day_1_intro.html",
+    "title": "1  Intro",
+    "section": "",
+    "text": "1.1 Introductions\nLet’s get to know each other.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Intro</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_intro.html#why-learn-r",
+    "href": "day_1_intro.html#why-learn-r",
+    "title": "1  Intro",
+    "section": "1.2 Why learn R?",
+    "text": "1.2 Why learn R?\nR is a programming language. Learning R is like learning any other language: you need to dive into to trying to use it, stumble around a lot, and keep going until using it begins to seem like second nature. When you learn another spoken language, you depend heavily on outside help, and you will often find yourself asking “How do you say?” or”What does __- mean?”. The same is true when learning a programming language like R – you’ll find that Google and other programmers will be your constant companions in finding your feet.\nBefore we dive in, let’s ask ourselves: why bother?\nR is a language specialized for processing, summarizing, and visualizing data. It is a programming language that can help ask questions of data, hopefully enabling us to draw wise conclusions from the patterns we observe.\nIn some ways, this makes learning R more difficult than learning other programming languages: we are not just learning R, we are learning how to be good data scientists. On the other hand, this makes learning R more useful than most programming languages – even if we change languages or tools you will still be gaining experience asking and answering questions from data.\nIt’s worth pausing for a moment to discuss:\n\nWhat are some examples of asking/answering questions of data in our society?\nWhat professions leverage data regularly?\nWhat, specifically, attracts you to learning these skills?",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Intro</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_intro.html#some-credit-where-credit-is-due",
+    "href": "day_1_intro.html#some-credit-where-credit-is-due",
+    "title": "1  Intro",
+    "section": "1.3 Some credit where credit is due",
+    "text": "1.3 Some credit where credit is due\nAs we prepare to dive in, it is worth reiterating that the materials for this course were adapted directly from R for Data Science (2nd edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. You can find this free online book here: https://r4ds.hadley.nz/ and its source code here: https://github.com/hadley/r4ds",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Intro</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_whole_game.html",
+    "href": "day_1_whole_game.html",
+    "title": "2  Whole Game",
+    "section": "",
+    "text": "Figure 2.1: In this section of the book, you’ll learn how to import, tidy, transform, and visualize data.\n\n\n\n\nThe Figure 2.1 presents the basic process of asking and answering questions from data:\n\n\nimporting - getting the data into your computer’s memory\n\ntidying - cleaning up the data, getting it in a format and form that is valid and machine-readable\n\ntransforming - making calculations from the data, deriving new measures from the data (e.g. %percent change)\n\nvisualizing - making images that help you see the patterns in the data so that you can begin to draw conclusions\n\nmodeling - as you see/explore the data you begin to develop mental or even mathematical models of what is happening with the data (e.g. the drug we’re studying is improving muscle density but causing respiratory side effects)\n\ncommunicating - we package up and present our work for others to be able to evaluate our claims and judge for themselves\n\nThis process is iterative (meaning you go through it repeatedly, making adjustments each time). No data project is ever really finished – you might learn more about your data, gather more data, discover a new technique for presenting/clarifying your data, present to another audience… good work with data lives on and continues to evolve! For that reason, it is important in your journey to learn how to organize your projects in ways that lets you and others easily understand and update them.\nIn this class, we’re going to try to quickly build the tools to work through this data-cycle process using R.\nYou won’t become an fluent R programmer data scientist in 1 week, but you can certainly get a long way on your journey to proficiency!",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Whole Game</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html",
+    "href": "day_1_first_graph.html",
+    "title": "3  First Graph",
+    "section": "",
+    "text": "3.1 Introduction\nR has several systems for making graphs, but ggplot2 is one of the most elegant and most versatile. ggplot2 implements the grammar of graphics, a coherent system for describing and building graphs. With ggplot2, you can do more and faster by learning one system and applying it in many places.\nThis chapter will teach you how to visualize your data using ggplot2. We will start by creating a simple scatterplot and use that to introduce aesthetic mappings and geometric objects – the fundamental building blocks of ggplot2. We will then walk you through visualizing distributions of single variables as well as visualizing relationships between two or more variables. We’ll finish off with saving your plots and troubleshooting tips.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#introduction",
+    "href": "day_1_first_graph.html#introduction",
+    "title": "3  First Graph",
+    "section": "",
+    "text": "“The simple graph has brought more information to the data analyst’s mind than any other device.” — John Tukey\n\n\n\n\n3.1.1 Prerequisites\nThis chapter focuses on ggplot2, one of the core packages in the tidyverse. To access the datasets, help pages, and functions used in this chapter, load the tidyverse by running:\n\nlibrary(tidyverse)\n#&gt; Warning: package 'tidyverse' was built under R version 4.4.3\n#&gt; Warning: package 'ggplot2' was built under R version 4.4.3\n#&gt; Warning: package 'tibble' was built under R version 4.4.3\n#&gt; Warning: package 'tidyr' was built under R version 4.4.2\n#&gt; Warning: package 'readr' was built under R version 4.4.3\n#&gt; Warning: package 'purrr' was built under R version 4.4.3\n#&gt; Warning: package 'forcats' was built under R version 4.4.3\n#&gt; Warning: package 'lubridate' was built under R version 4.4.3\n#&gt; ── Attaching core tidyverse packages ───────────────────── tidyverse 2.0.0 ──\n#&gt; ✔ dplyr     1.1.4     ✔ readr     2.1.5\n#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.1\n#&gt; ✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n#&gt; ✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n#&gt; ✔ purrr     1.1.0     \n#&gt; ── Conflicts ─────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ purrr::%||%()   masks base::%||%()\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()\n#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nThat one line of code loads the core tidyverse; the packages that you will use in almost every data analysis. It also tells you which functions from the tidyverse conflict with functions in base R (or from other packages you might have loaded)1.\nIf you run this code and get the error message there is no package called 'tidyverse', you’ll need to first install it, then run library() once again.\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\nYou only need to install a package once, but you need to load it every time you start a new session.\nIn addition to tidyverse, we will also use the palmerpenguins package, which includes the penguins dataset containing body measurements for penguins on three islands in the Palmer Archipelago, and the ggthemes package, which offers a colorblind safe color palette.\n\nlibrary(palmerpenguins)\n#&gt; Warning: package 'palmerpenguins' was built under R version 4.4.3\nlibrary(ggthemes)\n#&gt; Warning: package 'ggthemes' was built under R version 4.4.3",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#first-steps",
+    "href": "day_1_first_graph.html#first-steps",
+    "title": "3  First Graph",
+    "section": "\n3.2 First steps",
+    "text": "3.2 First steps\nDo penguins with longer flippers weigh more or less than penguins with shorter flippers? You probably already have an answer, but try to make your answer precise. What does the relationship between flipper length and body mass look like? Is it positive? Negative? Linear? Nonlinear? Does the relationship vary by the species of the penguin? How about by the island where the penguin lives? Let’s create visualizations that we can use to answer these questions.\n\n3.2.1 The penguins data frame\nYou can test your answers to those questions with the penguins data frame found in palmerpenguins (a.k.a. palmerpenguins::penguins). A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). penguins contains 344 observations collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER2.\nTo make the discussion easier, let’s define some terms:\n\nA variable is a quantity, quality, or property that you can measure.\nA value is the state of a variable when you measure it. The value of a variable may change from measurement to measurement.\nAn observation is a set of measurements made under similar conditions (you usually make all of the measurements in an observation at the same time and on the same object). An observation will contain several values, each associated with a different variable. We’ll sometimes refer to an observation as a data point.\nTabular data is a set of values, each associated with a variable and an observation. Tabular data is tidy if each value is placed in its own “cell”, each variable in its own column, and each observation in its own row.\n\nIn this context, a variable refers to an attribute of all the penguins, and an observation refers to all the attributes of a single penguin.\nType the name of the data frame in the console and R will print a preview of its contents. Note that it says tibble on top of this preview. In the tidyverse, we use special data frames called tibbles that you will learn more about soon.\n\npenguins\n#&gt; # A tibble: 344 × 8\n#&gt;   species island    bill_length_mm bill_depth_mm flipper_length_mm\n#&gt;   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;\n#&gt; 1 Adelie  Torgersen           39.1          18.7               181\n#&gt; 2 Adelie  Torgersen           39.5          17.4               186\n#&gt; 3 Adelie  Torgersen           40.3          18                 195\n#&gt; 4 Adelie  Torgersen           NA            NA                  NA\n#&gt; 5 Adelie  Torgersen           36.7          19.3               193\n#&gt; 6 Adelie  Torgersen           39.3          20.6               190\n#&gt; # ℹ 338 more rows\n#&gt; # ℹ 3 more variables: body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;\n\nThis data frame contains 8 columns. For an alternative view, where you can see all variables and the first few observations of each variable, use glimpse(). Or, if you’re in RStudio, run View(penguins) to open an interactive data viewer.\n\nglimpse(penguins)\n#&gt; Rows: 344\n#&gt; Columns: 8\n#&gt; $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, A…\n#&gt; $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torge…\n#&gt; $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.…\n#&gt; $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.…\n#&gt; $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, …\n#&gt; $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 347…\n#&gt; $ sex               &lt;fct&gt; male, female, female, NA, female, male, female, m…\n#&gt; $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2…\n\nAmong the variables in penguins are:\n\nspecies: a penguin’s species (Adelie, Chinstrap, or Gentoo).\nflipper_length_mm: length of a penguin’s flipper, in millimeters.\nbody_mass_g: body mass of a penguin, in grams.\n\nTo learn more about penguins, open its help page by running ?penguins.\n\n3.2.2 Ultimate goal\nOur ultimate goal in this chapter is to recreate the following visualization displaying the relationship between flipper lengths and body masses of these penguins, taking into consideration the species of the penguin.\n\n\n\n\n\n\n\n\n\n3.2.3 Creating a ggplot\nLet’s recreate this plot step-by-step.\nWith ggplot2, you begin a plot with the function ggplot(), defining a plot object that you then add layers to. The first argument of ggplot() is the dataset to use in the graph and so ggplot(data = penguins) creates an empty graph that is primed to display the penguins data, but since we haven’t told it how to visualize it yet, for now it’s empty. This is not a very exciting plot, but you can think of it like an empty canvas you’ll paint the remaining layers of your plot onto.\n\nggplot(data = penguins)\n\n\n\n\n\n\n\nNext, we need to tell ggplot() how the information from our data will be visually represented. The mapping argument of the ggplot() function defines how variables in your dataset are mapped to visual properties (aesthetics) of your plot. The mapping argument is always defined in the aes() function, and the x and y arguments of aes() specify which variables to map to the x and y axes. For now, we will only map flipper length to the x aesthetic and body mass to the y aesthetic. ggplot2 looks for the mapped variables in the data argument, in this case, penguins.\nThe following plot shows the result of adding these mappings.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n)\n\n\n\n\n\n\n\nOur empty canvas now has more structure – it’s clear where flipper lengths will be displayed (on the x-axis) and where body masses will be displayed (on the y-axis). But the penguins themselves are not yet on the plot. This is because we have not yet articulated, in our code, how to represent the observations from our data frame on our plot.\nTo do so, we need to define a geom: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with geom_. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (geom_bar()), line charts use line geoms (geom_line()), boxplots use boxplot geoms (geom_boxplot()), scatterplots use point geoms (geom_point()), and so on.\nThe function geom_point() adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You’ll learn a whole bunch of geoms throughout the book, particularly in ?sec-layers.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point()\n#&gt; Warning: Removed 2 rows containing missing values or values outside the scale range\n#&gt; (`geom_point()`).\n\n\n\n\n\n\n\nNow we have something that looks like what we might think of as a “scatterplot”. It doesn’t yet match our “ultimate goal” plot, but using this plot we can start answering the question that motivated our exploration: “What does the relationship between flipper length and body mass look like?” The relationship appears to be positive (as flipper length increases, so does body mass), fairly linear (the points are clustered around a line instead of a curve), and moderately strong (there isn’t too much scatter around such a line). Penguins with longer flippers are generally larger in terms of their body mass.\nBefore we add more layers to this plot, let’s pause for a moment and review the warning message we got:\n\nRemoved 2 rows containing missing values (geom_point()).\n\nWe’re seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing. This type of warning is probably one of the most common types of warnings you will see when working with real data – missing values are a very common issue and you’ll learn more about them throughout the book, particularly in ?sec-missing-values. For the remaining plots in this chapter we will suppress this warning so it’s not printed alongside every single plot we make.\n\n3.2.4 Adding aesthetics and layers\nScatterplots are useful for displaying the relationship between two numerical variables, but it’s always a good idea to be skeptical of any apparent relationship between two variables and ask if there may be other variables that explain or change the nature of this apparent relationship. For example, does the relationship between flipper length and body mass differ by species? Let’s incorporate species into our plot and see if this reveals any additional insights into the apparent relationship between these variables. We will do this by representing species with different colored points.\nTo achieve this, will we need to modify the aesthetic or the geom? If you guessed “in the aesthetic mapping, inside of aes()”, you’re already getting the hang of creating data visualizations with ggplot2! And if not, don’t worry. Throughout the book you will make many more ggplots and have many more opportunities to check your intuition as you make them.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)\n) +\n  geom_point()\n\n\n\n\n\n\n\nWhen a categorical variable is mapped to an aesthetic, ggplot2 will automatically assign a unique value of the aesthetic (here a unique color) to each unique level of the variable (each of the three species), a process known as scaling. ggplot2 will also add a legend that explains which values correspond to which levels.\nNow let’s add one more layer: a smooth curve displaying the relationship between body mass and flipper length. Before you proceed, refer back to the code above, and think about how we can add this to our existing plot.\nSince this is a new geometric object representing our data, we will add a new geom as a layer on top of our point geom: geom_smooth(). And we will specify that we want to draw the line of best fit based on a linear model with method = \"lm\".\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)\n) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nWe have successfully added lines, but this plot doesn’t look like the plot from Section 3.2.2, which only has one line for the entire dataset as opposed to separate lines for each of the penguin species.\nWhen aesthetic mappings are defined in ggplot(), at the global level, they’re passed down to each of the subsequent geom layers of the plot. However, each geom function in ggplot2 can also take a mapping argument, which allows for aesthetic mappings at the local level that are added to those inherited from the global level. Since we want points to be colored based on species but don’t want the lines to be separated out for them, we should specify color = species for geom_point() only.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point(mapping = aes(color = species)) +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nVoila! We have something that looks very much like our ultimate goal, though it’s not yet perfect. We still need to use different shapes for each species of penguins and improve labels.\nIt’s generally not a good idea to represent information using only colors on a plot, as people perceive colors differently due to color blindness or other color vision differences. Therefore, in addition to color, we can also map species to the shape aesthetic.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point(mapping = aes(color = species, shape = species)) +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nNote that the legend is automatically updated to reflect the different shapes of the points as well.\nAnd finally, we can improve the labels of our plot using the labs() function in a new layer. Some of the arguments to labs() might be self explanatory: title adds a title and subtitle adds a subtitle to the plot. Other arguments match the aesthetic mappings, x is the x-axis label, y is the y-axis label, and color and shape define the label for the legend. In addition, we can improve the color palette to be colorblind safe with the scale_color_colorblind() function from the ggthemes package.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point(aes(color = species, shape = species)) +\n  geom_smooth(method = \"lm\") +\n  labs(\n    title = \"Body mass and flipper length\",\n    subtitle = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n    x = \"Flipper length (mm)\", y = \"Body mass (g)\",\n    color = \"Species\", shape = \"Species\"\n  ) +\n  scale_color_colorblind()\n\n\n\n\n\n\n\nWe finally have a plot that perfectly matches our “ultimate goal”!\n\n3.2.5 Exercises\n\nHow many rows are in penguins? How many columns?\nWhat does the bill_depth_mm variable in the penguins data frame describe? Read the help for ?penguins to find out.\nMake a scatterplot of bill_depth_mm vs. bill_length_mm. That is, make a scatterplot with bill_depth_mm on the y-axis and bill_length_mm on the x-axis. Describe the relationship between these two variables.\nWhat happens if you make a scatterplot of species vs. bill_depth_mm? What might be a better choice of geom?\n\nWhy does the following give an error and how would you fix it?\n\nggplot(data = penguins) + \n  geom_point()\n\n\nWhat does the na.rm argument do in geom_point()? What is the default value of the argument? Create a scatterplot where you successfully use this argument set to TRUE.\nAdd the following caption to the plot you made in the previous exercise: “Data come from the palmerpenguins package.” Hint: Take a look at the documentation for labs().\n\nRecreate the following visualization. What aesthetic should bill_depth_mm be mapped to? And should it be mapped at the global level or at the geom level?\n\n\n\n\n\n\n\n\n\n\nRun this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island)\n) +\n  geom_point() +\n  geom_smooth(se = FALSE)\n\n\n\nWill these two graphs look different? Why/why not?\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point() +\n  geom_smooth()\n\nggplot() +\n  geom_point(\n    data = penguins,\n    mapping = aes(x = flipper_length_mm, y = body_mass_g)\n  ) +\n  geom_smooth(\n    data = penguins,\n    mapping = aes(x = flipper_length_mm, y = body_mass_g)\n  )",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#sec-ggplot2-calls",
+    "href": "day_1_first_graph.html#sec-ggplot2-calls",
+    "title": "3  First Graph",
+    "section": "\n3.3 ggplot2 calls",
+    "text": "3.3 ggplot2 calls\nAs we move on from these introductory sections, we’ll transition to a more concise expression of ggplot2 code. So far we’ve been very explicit, which is helpful when you are learning:\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point()\n\nTypically, the first one or two arguments to a function are so important that you should know them by heart. The first two arguments to ggplot() are data and mapping, in the remainder of the book, we won’t supply those names. That saves typing, and, by reducing the amount of extra text, makes it easier to see what’s different between plots. That’s a really important programming concern that we’ll come back to in ?sec-functions.\nRewriting the previous plot more concisely yields:\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + \n  geom_point()\n\nIn the future, you’ll also learn about the pipe, |&gt;, which will allow you to create that plot with:\n\npenguins |&gt; \n  ggplot(aes(x = flipper_length_mm, y = body_mass_g)) + \n  geom_point()",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#visualizing-distributions",
+    "href": "day_1_first_graph.html#visualizing-distributions",
+    "title": "3  First Graph",
+    "section": "\n3.4 Visualizing distributions",
+    "text": "3.4 Visualizing distributions\nHow you visualize the distribution of a variable depends on the type of variable: categorical or numerical.\n\n3.4.1 A categorical variable\nA variable is categorical if it can only take one of a small set of values. To examine the distribution of a categorical variable, you can use a bar chart. The height of the bars displays how many observations occurred with each x value.\n\nggplot(penguins, aes(x = species)) +\n  geom_bar()\n\n\n\n\n\n\n\nIn bar plots of categorical variables with non-ordered levels, like the penguin species above, it’s often preferable to reorder the bars based on their frequencies. Doing so requires transforming the variable to a factor (how R handles categorical data) and then reordering the levels of that factor.\n\nggplot(penguins, aes(x = fct_infreq(species))) +\n  geom_bar()\n\n\n\n\n\n\n\nYou will learn more about factors and functions for dealing with factors (like fct_infreq() shown above) in ?sec-factors.\n\n3.4.2 A numerical variable\nA variable is numerical (or quantitative) if it can take on a wide range of numerical values, and it is sensible to add, subtract, or take averages with those values. Numerical variables can be continuous or discrete.\nOne commonly used visualization for distributions of continuous variables is a histogram.\n\nggplot(penguins, aes(x = body_mass_g)) +\n  geom_histogram(binwidth = 200)\n\n\n\n\n\n\n\nA histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin. In the graph above, the tallest bar shows that 39 observations have a body_mass_g value between 3,500 and 3,700 grams, which are the left and right edges of the bar.\nYou can set the width of the intervals in a histogram with the binwidth argument, which is measured in the units of the x variable. You should always explore a variety of binwidths when working with histograms, as different binwidths can reveal different patterns. In the plots below a binwidth of 20 is too narrow, resulting in too many bars, making it difficult to determine the shape of the distribution. Similarly, a binwidth of 2,000 is too high, resulting in all data being binned into only three bars, and also making it difficult to determine the shape of the distribution. A binwidth of 200 provides a sensible balance.\nggplot(penguins, aes(x = body_mass_g)) +\n  geom_histogram(binwidth = 20)\nggplot(penguins, aes(x = body_mass_g)) +\n  geom_histogram(binwidth = 2000)\n\n\n\n\n\n\n\n\n\n\nAn alternative visualization for distributions of numerical variables is a density plot. A density plot is a smoothed-out version of a histogram and a practical alternative, particularly for continuous data that comes from an underlying smooth distribution. We won’t go into how geom_density() estimates the density (you can read more about that in the function documentation), but let’s explain how the density curve is drawn with an analogy. Imagine a histogram made out of wooden blocks. Then, imagine that you drop a cooked spaghetti string over it. The shape the spaghetti will take draped over blocks can be thought of as the shape of the density curve. It shows fewer details than a histogram but can make it easier to quickly glean the shape of the distribution, particularly with respect to modes and skewness.\n\nggplot(penguins, aes(x = body_mass_g)) +\n  geom_density()\n#&gt; Warning: Removed 2 rows containing non-finite outside the scale range\n#&gt; (`stat_density()`).\n\n\n\n\n\n\n\n\n3.4.3 Exercises\n\nMake a bar plot of species of penguins, where you assign species to the y aesthetic. How is this plot different?\n\nHow are the following two plots different? Which aesthetic, color or fill, is more useful for changing the color of bars?\n\nggplot(penguins, aes(x = species)) +\n  geom_bar(color = \"red\")\n\nggplot(penguins, aes(x = species)) +\n  geom_bar(fill = \"red\")\n\n\nWhat does the bins argument in geom_histogram() do?\nMake a histogram of the carat variable in the diamonds dataset that is available when you load the tidyverse package. Experiment with different binwidths. What binwidth reveals the most interesting patterns?",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#visualizing-relationships",
+    "href": "day_1_first_graph.html#visualizing-relationships",
+    "title": "3  First Graph",
+    "section": "\n3.5 Visualizing relationships",
+    "text": "3.5 Visualizing relationships\nTo visualize a relationship we need to have at least two variables mapped to aesthetics of a plot. In the following sections you will learn about commonly used plots for visualizing relationships between two or more variables and the geoms used for creating them.\n\n3.5.1 A numerical and a categorical variable\nTo visualize the relationship between a numerical and a categorical variable we can use side-by-side box plots. A boxplot is a type of visual shorthand for measures of position (percentiles) that describe a distribution. It is also useful for identifying potential outliers. As shown in Figure 3.1, each boxplot consists of:\n\nA box that indicates the range of the middle half of the data, a distance known as the interquartile range (IQR), stretching from the 25th percentile of the distribution to the 75th percentile. In the middle of the box is a line that displays the median, i.e. 50th percentile, of the distribution. These three lines give you a sense of the spread of the distribution and whether or not the distribution is symmetric about the median or skewed to one side.\nVisual points that display observations that fall more than 1.5 times the IQR from either edge of the box. These outlying points are unusual so are plotted individually.\nA line (or whisker) that extends from each end of the box and goes to the farthest non-outlier point in the distribution.\n\n\n\n\n\n\n\n\nFigure 3.1: Diagram depicting how a boxplot is created.\n\n\n\n\nLet’s take a look at the distribution of body mass by species using geom_boxplot():\n\nggplot(penguins, aes(x = species, y = body_mass_g)) +\n  geom_boxplot()\n\n\n\n\n\n\n\nAlternatively, we can make density plots with geom_density().\n\nggplot(penguins, aes(x = body_mass_g, color = species)) +\n  geom_density(linewidth = 0.75)\n\n\n\n\n\n\n\nWe’ve also customized the thickness of the lines using the linewidth argument in order to make them stand out a bit more against the background.\nAdditionally, we can map species to both color and fill aesthetics and use the alpha aesthetic to add transparency to the filled density curves. This aesthetic takes values between 0 (completely transparent) and 1 (completely opaque). In the following plot it’s set to 0.5.\n\nggplot(penguins, aes(x = body_mass_g, color = species, fill = species)) +\n  geom_density(alpha = 0.5)\n\n\n\n\n\n\n\nNote the terminology we have used here:\n\nWe map variables to aesthetics if we want the visual attribute represented by that aesthetic to vary based on the values of that variable.\nOtherwise, we set the value of an aesthetic.\n\n3.5.2 Two categorical variables\nWe can use stacked bar plots to visualize the relationship between two categorical variables. For example, the following two stacked bar plots both display the relationship between island and species, or specifically, visualizing the distribution of species within each island.\nThe first plot shows the frequencies of each species of penguins on each island. The plot of frequencies shows that there are equal numbers of Adelies on each island. But we don’t have a good sense of the percentage balance within each island.\n\nggplot(penguins, aes(x = island, fill = species)) +\n  geom_bar()\n\n\n\n\n\n\n\nThe second plot, a relative frequency plot created by setting position = \"fill\" in the geom, is more useful for comparing species distributions across islands since it’s not affected by the unequal numbers of penguins across the islands. Using this plot we can see that Gentoo penguins all live on Biscoe island and make up roughly 75% of the penguins on that island, Chinstrap all live on Dream island and make up roughly 50% of the penguins on that island, and Adelie live on all three islands and make up all of the penguins on Torgersen.\n\nggplot(penguins, aes(x = island, fill = species)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\nIn creating these bar charts, we map the variable that will be separated into bars to the x aesthetic, and the variable that will change the colors inside the bars to the fill aesthetic.\n\n3.5.3 Two numerical variables\nSo far you’ve learned about scatterplots (created with geom_point()) and smooth curves (created with geom_smooth()) for visualizing the relationship between two numerical variables. A scatterplot is probably the most commonly used plot for visualizing the relationship between two numerical variables.\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\n\n\n\n\n\n\n\n3.5.4 Three or more variables\nAs we saw in Section 3.2.4, we can incorporate more variables into a plot by mapping them to additional aesthetics. For example, in the following scatterplot the colors of points represent species and the shapes of points represent islands.\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species, shape = island))\n\n\n\n\n\n\n\nHowever adding too many aesthetic mappings to a plot makes it cluttered and difficult to make sense of. Another way, which is particularly useful for categorical variables, is to split your plot into facets, subplots that each display one subset of the data.\nTo facet your plot by a single variable, use facet_wrap(). The first argument of facet_wrap() is a formula3, which you create with ~ followed by a variable name. The variable that you pass to facet_wrap() should be categorical.\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species, shape = species)) +\n  facet_wrap(~island)\n\n\n\n\n\n\n\nYou will learn about many other geoms for visualizing distributions of variables and relationships between them in ?sec-layers.\n\n3.5.5 Exercises\n\nThe mpg data frame that is bundled with the ggplot2 package contains 234 observations collected by the US Environmental Protection Agency on 38 car models. Which variables in mpg are categorical? Which variables are numerical? (Hint: Type ?mpg to read the documentation for the dataset.) How can you see this information when you run mpg?\nMake a scatterplot of hwy vs. displ using the mpg data frame. Next, map a third, numerical variable to color, then size, then both color and size, then shape. How do these aesthetics behave differently for categorical vs. numerical variables?\nIn the scatterplot of hwy vs. displ, what happens if you map a third variable to linewidth?\nWhat happens if you map the same variable to multiple aesthetics?\nMake a scatterplot of bill_depth_mm vs. bill_length_mm and color the points by species. What does adding coloring by species reveal about the relationship between these two variables? What about faceting by species?\n\nWhy does the following yield two separate legends? How would you fix it to combine the two legends?\n\nggplot(\n  data = penguins,\n  mapping = aes(\n    x = bill_length_mm, y = bill_depth_mm, \n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  labs(color = \"Species\")\n\n\n\nCreate the two following stacked bar plots. Which question can you answer with the first one? Which question can you answer with the second one?\n\nggplot(penguins, aes(x = island, fill = species)) +\n  geom_bar(position = \"fill\")\nggplot(penguins, aes(x = species, fill = island)) +\n  geom_bar(position = \"fill\")",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#sec-ggsave",
+    "href": "day_1_first_graph.html#sec-ggsave",
+    "title": "3  First Graph",
+    "section": "\n3.6 Saving your plots",
+    "text": "3.6 Saving your plots\nOnce you’ve made a plot, you might want to get it out of R by saving it as an image that you can use elsewhere. That’s the job of ggsave(), which will save the plot most recently created to disk:\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\nggsave(filename = \"penguin-plot.png\")\n\nThis will save your plot to your working directory, a concept you’ll learn more about in ?sec-workflow-scripts-projects.\nIf you don’t specify the width and height they will be taken from the dimensions of the current plotting device. For reproducible code, you’ll want to specify them. You can learn more about ggsave() in the documentation.\nGenerally, however, we recommend that you assemble your final reports using Quarto, a reproducible authoring system that allows you to interleave your code and your prose and automatically include your plots in your write-ups. You will learn more about Quarto in ?sec-quarto.\n\n3.6.1 Exercises\n\n\nRun the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\n\nggplot(mpg, aes(x = class)) +\n  geom_bar()\nggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(\"mpg-plot.png\")\n\n\nWhat do you need to change in the code above to save the plot as a PDF instead of a PNG? How could you find out what types of image files would work in ggsave()?",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#common-problems",
+    "href": "day_1_first_graph.html#common-problems",
+    "title": "3  First Graph",
+    "section": "\n3.7 Common problems",
+    "text": "3.7 Common problems\nAs you start to run R code, you’re likely to run into problems. Don’t worry — it happens to everyone. We have all been writing R code for years, but every day we still write code that doesn’t work on the first try!\nStart by carefully comparing the code that you’re running to the code in the book. R is extremely picky, and a misplaced character can make all the difference. Make sure that every ( is matched with a ) and every \" is paired with another \". Sometimes you’ll run the code and nothing happens. Check the left-hand of your console: if it’s a +, it means that R doesn’t think you’ve typed a complete expression and it’s waiting for you to finish it. In this case, it’s usually easy to start from scratch again by pressing ESCAPE to abort processing the current command.\nOne common problem when creating ggplot2 graphics is to put the + in the wrong place: it has to come at the end of the line, not the start. In other words, make sure you haven’t accidentally written code like this:\n\nggplot(data = mpg) \n+ geom_point(mapping = aes(x = displ, y = hwy))\n\nIf you’re still stuck, try the help. You can get help about any R function by running ?function_name in the console, or highlighting the function name and pressing F1 in RStudio. Don’t worry if the help doesn’t seem that helpful - instead skip down to the examples and look for code that matches what you’re trying to do.\nIf that doesn’t help, carefully read the error message. Sometimes the answer will be buried there! But when you’re new to R, even if the answer is in the error message, you might not yet know how to understand it. Another great tool is Google: try googling the error message, as it’s likely someone else has had the same problem, and has gotten help online.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#summary",
+    "href": "day_1_first_graph.html#summary",
+    "title": "3  First Graph",
+    "section": "\n3.8 Summary",
+    "text": "3.8 Summary\nIn this chapter, you’ve learned the basics of data visualization with ggplot2. We started with the basic idea that underpins ggplot2: a visualization is a mapping from variables in your data to aesthetic properties like position, color, size and shape. You then learned about increasing the complexity and improving the presentation of your plots layer-by-layer. You also learned about commonly used plots for visualizing the distribution of a single variable as well as for visualizing relationships between two or more variables, by leveraging additional aesthetic mappings and/or splitting your plot into small multiples using faceting.\nWe’ll use visualizations again and again throughout this book, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in ?sec-layers through ?sec-communication.\nWith the basics of visualization under your belt, in the next chapter we’re going to switch gears a little and give you some practical workflow advice. We intersperse workflow advice with data science tools throughout this part of the book because it’ll help you stay organized as you write increasing amounts of R code.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_first_graph.html#footnotes",
+    "href": "day_1_first_graph.html#footnotes",
+    "title": "3  First Graph",
+    "section": "",
+    "text": "You can eliminate that message and force conflict resolution to happen on demand by using the conflicted package, which becomes more important as you load more packages. You can learn more about conflicted at https://conflicted.r-lib.org.↩︎\nHorst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218.↩︎\nHere “formula” is the name of the thing created by ~, not a synonym for “equation”.↩︎",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_r_basics.html",
+    "href": "day_1_r_basics.html",
+    "title": "4  R Basics",
+    "section": "",
+    "text": "We’re going to jump right into making our first graph. This won’t all make perfect sense at first, but that’s ok… the only way to get started is to dive right in.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R Basics</span>"
+    ]
+  },
+  {
+    "objectID": "day_1_assignments.html",
+    "href": "day_1_assignments.html",
+    "title": "5  First Graph",
+    "section": "",
+    "text": "We’re going to jump right into making our first graph. This won’t all make perfect sense at first, but that’s ok… the only way to get started is to dive right in.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>First Graph</span>"
+    ]
+  },
+  {
+    "objectID": "day_2_layers.html",
+    "href": "day_2_layers.html",
+    "title": "6  Layers",
+    "section": "",
+    "text": "Day 2 - Layers!",
+    "crumbs": [
+      "Day 2",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Layers</span>"
+    ]
+  },
+  {
+    "objectID": "day_2_exploring.html",
+    "href": "day_2_exploring.html",
+    "title": "7  Exploratory data analysis",
+    "section": "",
+    "text": "Day 2 - Layers!",
+    "crumbs": [
+      "Day 2",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "day_2_communication.html",
+    "href": "day_2_communication.html",
+    "title": "8  Layers",
+    "section": "",
+    "text": "Day 2 - Communication!",
+    "crumbs": [
+      "Day 2",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Layers</span>"
     ]
   }
 ]

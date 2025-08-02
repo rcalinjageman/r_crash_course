@@ -1,38 +1,57 @@
 project:
-  type: website
+  type: book
+  output-dir: docs
 
-website:
+book:
   title: "DU-RCC"
-  sidebar:
-    logo: '/resources/logo.png'
-    style: docked
-    search: true
-    pinned: true
-    contents:
-      - href: index.qmd
-        text: Home
-      - href: getting_started.qmd
-        text: Getting started
-      - href: day_1.qmd
-        text: Day 1
-      - href: day_2.qmd
-        text: Day 2
-      - href: day_3.qmd
-        text: Day 3
-      - href: day_4.qmd
-        text: Day 4
-      - href: day_5.qmd
-        text: Day 5
-      - href: resources.qmd
-        text: Resources
-
+  reader-mode: true
+  
+  page-footer:
+    left: |
+      Adapted heavily from R for Data Science (2e) by Hadley Wickham, Mine
+      Çetinkaya-Rundel, and Garrett Grolemund.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  
+  cover-image: '/resources/logo.png'
+  site-url: https://rcalinjageman.github.io/r_crash_course/
+  repo-url: https://github.com/rcalinjageman/r_crash_course
+  repo-branch: meain
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    
+    - getting_started.qmd
+    
+    - part: day_1.qmd
+      chapters:
+        - day_1_intro.qmd
+        - day_1_whole_game.qmd
+        - day_1_first_graph.qmd
+        - day_1_r_basics.qmd
+        - day_1_assignments.qmd
+    - part: day_2.qmd
+      chapters: 
+        - day_2_layers.qmd
+        - day_2_exploring.qmd
+        - day_2_communication.qmd
+    - part: day_3.qmd
+      chapters: 
+        - day_3_more.qmd
+    - part: day_4.qmd
+      chapters:
+        - day_4_more.qmd
+    - part: day_5.qmd
+      chapters:
+        - day_5_more.qmd
+    
+ 
 format:
   html:
     theme:
       - morph
-      - brand
-    css: styles.css
-    toc: true
+      - r4ds.scss
+    code-link: true
+    callout-appearance: simple
 
 editor: visual
-

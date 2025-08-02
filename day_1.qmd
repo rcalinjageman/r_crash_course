@@ -1,17 +1,24 @@
----
-title: "Day 1"
----
+# Day 1 {#sec-day-1-overview .unnumbered}
 
-# Why learn R?
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+```
 
-R is a programming language. Learning R is like learning any other language: you need to dive into to trying to use it, stumble around a lot, and keep going until using it begins to seem like second nature. When you learn another spoken language, you depend heavily on other speakers and on resources, and you will often find yourself asking "*How do you say?"* or "*What does \_\_- mean?*". The same with learning a programming language like R – you'll find that Google and other programmers will be your constant companions in finding your feet.
 
-Before we dive in, let's ask ourselves: why bother?
+It's day 1! Excitement is high. Here's the plan for today:
 
-## Asking questions of data
+-   Get to know each other
 
-R is a language specialized for processing, summarizing, and visualizing *data*. It is a programming language that can help *ask questions of data*, hopefully enabling us to draw wise conclusions from the patterns we observe.
+-   Why learn R and data science?
 
-This makes R a bit more difficult
+-   Jump in - first graph
+
+-   Coding basics
+
+-   Assignments
+
+We're assuming that everyone has created their Posit.Cloud account and their Github Account. If not, please check out the instructions on the @sec-getting-started page.
 
 # 
