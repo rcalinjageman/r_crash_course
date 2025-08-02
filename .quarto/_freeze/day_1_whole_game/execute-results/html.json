@@ -1,0 +1,15 @@
+{
+  "hash": "64db44c004d4331cad80879327707162",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Whole Game {#sec-day-1-whole-game}\n\n\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![In this section of the book, you'll learn how to import,\ntidy, transform, and visualize data.\n](diagrams/data-science/whole-game.png){#fig-ds-whole-game fig-alt='A diagram displaying the data science cycle: Import -> Tidy ->\nUnderstand  (which has the phases Transform -> Visualize -> Model in a\ncycle) -> Communicate. Surrounding all of these is Program \nImport, Tidy, Transform, and Visualize is highlighted.' width=535}\n:::\n:::\n\n\n\n\nThe @fig-ds-whole-game presents the basic process of asking and answering questions from data:\n\n-   **importing** - getting the data into your computer's memory\n-   **tidying** - cleaning up the data, getting it in a format and form that is valid and machine-readable\n-   **transforming** - making calculations from the data, deriving new measures from the data (e.g. %percent change)\n-   **visualizing** - making images that help you *see* the patterns in the data so that you can begin to draw conclusions\n-   **modeling** - as you see/explore the data you begin to develop mental or even mathematical models of what is happening with the data (e.g. the drug we're studying is improving muscle density but causing respiratory side effects)\n-   **communicating** - we package up and present our work for others to be able to evaluate our claims and judge for themselves\n\nThis process is iterative (meaning you go through it repeatedly, making adjustments each time). No data project is ever really finished -- you might learn more about your data, gather more data, discover a new technique for presenting/clarifying your data, present to another audience... good work with data lives on and continues to evolve! For that reason, it is important in your journey to learn how to organize your projects in ways that lets you and others easily understand and update them.\n\nIn this class, we're going to try to quickly build the tools to work through this data-cycle process using R.\n\nYou won't become an fluent R programmer data scientist in 1 week, but you can certainly get a long way on your journey to proficiency!\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
