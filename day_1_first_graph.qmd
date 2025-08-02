@@ -5,53 +5,95 @@
 source("_common.R")
 ```
 
-## Introduction
+We're going to jump right into a data science project. You won't get all the details this first time through, but that's ok – let's just see the general flow of things.
 
-> "The simple graph has brought more information to the data analyst's mind than any other device." --- John Tukey
+For this first project wer'e going to use an R package called **ggplot2** – it's the main way folks who use R generate graphs and images.
 
-R has several systems for making graphs, but ggplot2 is one of the most elegant and most versatile. ggplot2 implements the **grammar of graphics**, a coherent system for describing and building graphs. With ggplot2, you can do more and faster by learning one system and applying it in many places.
-
-This chapter will teach you how to visualize your data using **ggplot2**. We will start by creating a simple scatterplot and use that to introduce aesthetic mappings and geometric objects -- the fundamental building blocks of ggplot2. We will then walk you through visualizing distributions of single variables as well as visualizing relationships between two or more variables. We'll finish off with saving your plots and troubleshooting tips.
+We will start by creating a simple scatterplot and use that to introduce aesthetic mappings and geometric objects -- the fundamental building blocks of ggplot2. We will then walk you through visualizing distributions of single variables as well as visualizing relationships between two or more variables. We'll finish off with saving your plots and troubleshooting tips.
 
 ### Prerequisites
 
-This chapter focuses on ggplot2, one of the core packages in the tidyverse. To access the datasets, help pages, and functions used in this chapter, load the tidyverse by running:
+This chapter focuses on ggplot2. To access the datasets, help pages, and functions used in this chapter, load ggplot2:
 
 ```{r}
 #| label: setup
-library(tidyverse)
+library(ggplot2)
 ```
 
-That one line of code loads the core tidyverse; the packages that you will use in almost every data analysis. It also tells you which functions from the tidyverse conflict with functions in base R (or from other packages you might have loaded)[^day_1_first_graph-1].
+That one line of code loads ggplot2, letting R know that we'll be using it to create data visualizations.
 
-[^day_1_first_graph-1]: You can eliminate that message and force conflict resolution to happen on demand by using the conflicted package, which becomes more important as you load more packages. You can learn more about conflicted at <https://conflicted.r-lib.org>.
-
-If you run this code and get the error message `there is no package called 'tidyverse'`, you'll need to first install it, then run `library()` once again.
+I've setup this project to already have ggplot2 installed and ready to load. But if you run this code and get the error message `there is no package called 'tidyverse'`, you'll need to first install it, then run `library()` once again.
 
 ```{r}
 #| eval: false
-install.packages("tidyverse")
-library(tidyverse)
+install.packages("ggplot2")
+library(ggplot2)
 ```
 
 You only need to install a package once, but you need to load it every time you start a new session.
 
-In addition to tidyverse, we will also use the **palmerpenguins** package, which includes the `penguins` dataset containing body measurements for penguins on three islands in the Palmer Archipelago, and the ggthemes package, which offers a colorblind safe color palette.
+In addition to tidyverse, we will also use the **eammi2** dataset. This is data from the "Emerging Adulthood Measured at Multiple Institutions 2" project. This project surveyed 4,220 college students at 32 different academic institutions across the U.S (of whom, 3,134 gave valid responses that could be analyzed). The data for this project was publicly posted on the Open Science Framework here: <https://osf.io/qtqpb/>. A paper (Grahe et al., 2018) describing what was measured and why is here: <https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38>
+
+The eammi2 project was quite extensive, measuring many different variables, including:
+
+-   *Happiness* - which psychologists call Subjective Well Being. Participants rated their happiness on 6 different items on a scale from 1-7. Each participant's happiness level is in SWBScale
+
+-   *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items). Each participant's overall mindfullness scores is in MindfulnessScale
+
+-   *Social media use*: This was measured in a couple of ways, with overall intensity of use in SocialMediaSum
+
+-   *Markers of Adulthood* (MOA; items derived from \[[11](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B11)\], \[[12](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B12)\]; importance, 20 items; achieve, 20 items; adulthood, 1 item),
+
+-   *IDEA-8* \[[13](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B13)\] (8 items),
+
+-   *Political Affiliation* (party identification, 1 item; political ideology, 1 item;
+
+-   *Presidential Preference, 1* item),
+
+-   *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items),
+
+-   *Need to Belong* \[[16](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B16)\] (10 items),
+
+-   *Efficacy* \[[17](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B17)\] (8 items),
+
+-   *Perceived Social Support* \[[18](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B18)\] (12 items),
+
+-   *Social Media Use Scale* (adapted from \[[19](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B19)\], \[[20](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B20)\], maintaining existing connections, 5 items; making new connections, 4 items; information, 2 items),
+
+-   *American Dream* (importance of achieving, 1 item; ability to achieve; 1 item),
+
+-   *Interpersonal Transgressions* (exploratory items adapted from \[[21](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B21)\], 12 items),
+
+-   *Narcissistic Personality Inventory-13* (NPI-13; \[[22](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B22)\], 13 items),
+
+-   *Interpersonal Exploitativeness Scale* \[[23](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B23)\], (3 items),
+
+-   *Disability Identity* (one dichotomous item assessing participants’ self-perception as “disabled” and six dichotomous items assessing the presence or absence of a disability in a variety of areas; including physical, sensory, learning, psychiatric, chronic health, and other;
+
+-   *Personal Opinions Questionnaire*, POQ; \[[24](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B24)\], 15 items),
+
+-   *Patient Health Questionnaire* \[[25](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B25)\], (13 items),
+
+-   *Perceived Stress Questionnaire* \[[26](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B26)\], (10 items),
+
+-   *Marriage Opinions* (Central identity, Marital Salience, Marital Timing, Marital Permanence, adapted from \[[27](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B27)\], \[[28](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B28)\] (5 items),
+
+-   demographics (school attended, sex, age, education, sibling, race, armed services (2 items), income, and Residency (3 items).
+
+We are going to obtain the eammi2 data set using the download.file command in R. We will then read into memory using the read.csv command, calling it eammi2.
 
 ```{r}
-library(palmerpenguins)
-library(ggthemes)
+download.file("https://github.com/rcalinjageman/r_crash_course/raw/refs/heads/main/data/EAMMi2-CleanData.csv", "EAMMi2-CleanData.csv")
+eammi2 <- read.csv("EAMMi2-CleanData.csv")
 ```
 
 ## First steps
 
-Do penguins with longer flippers weigh more or less than penguins with shorter flippers? You probably already have an answer, but try to make your answer precise. What does the relationship between flipper length and body mass look like? Is it positive? Negative? Linear? Nonlinear? Does the relationship vary by the species of the penguin? How about by the island where the penguin lives? Let's create visualizations that we can use to answer these questions.
+Does being mindful correlate with being a happier person? Does lots of social media correlate with being less happy? Are these relationships different depending on the gender soeone identifies with? Let's create visualizations that we can use to answer these questions.
 
-### The `penguins` data frame
+### The `eammi2` data frame
 
-You can test your answers to those questions with the `penguins` **data frame** found in palmerpenguins (a.k.a. `palmerpenguins::penguins`). A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). `penguins` contains `r nrow(penguins)` observations collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER[^day_1_first_graph-2].
-
-[^day_1_first_graph-2]: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. <https://allisonhorst.github.io/palmerpenguins/>. doi: 10.5281/zenodo.3960218.
+You can test your answers to those questions with the `eammi2` **data frame** that we have downloaded and loaded. A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). `eammi2` contains `r nrow(eammi2)` observations collected and made available by Grahe et al. (2018).
 
 To make the discussion easier, let's define some terms:
 
@@ -63,29 +105,31 @@ To make the discussion easier, let's define some terms:
 
 -   **Tabular data** is a set of values, each associated with a variable and an observation. Tabular data is *tidy* if each value is placed in its own "cell", each variable in its own column, and each observation in its own row.
 
-In this context, a variable refers to an attribute of all the penguins, and an observation refers to all the attributes of a single penguin.
+In this context, a variable refers to an attribute of all the college students, and an observation refers to all the attributes of a single college student.
 
-Type the name of the data frame in the console and R will print a preview of its contents. Note that it says `tibble` on top of this preview. In the tidyverse, we use special data frames called **tibbles** that you will learn more about soon.
-
-```{r}
-penguins
-```
-
-This data frame contains `r ncol(penguins)` columns. For an alternative view, where you can see all variables and the first few observations of each variable, use `glimpse()`. Or, if you're in RStudio, run `View(penguins)` to open an interactive data viewer.
+Type the name of the data frame in the console and R will print a preview of its contents.
 
 ```{r}
-glimpse(penguins)
+eammi2
 ```
 
-Among the variables in `penguins` are:
+This data frame contains `r ncol(eammi2)` columns. In RStudio, run `View(eammi2)` to open an interactive data viewer.
 
-1.  `species`: a penguin's species (Adelie, Chinstrap, or Gentoo).
+Among the variables
 
-2.  `flipper_length_mm`: length of a penguin's flipper, in millimeters.
+1.  `SWBScale`: Each participant's happiness rating on a scale from 1-7
 
-3.  `body_mass_g`: body mass of a penguin, in grams.
+2.  `MindfulnessScale` Each participant's overall mindfullness score, also on a scale from 1-7
 
-To learn more about `penguins`, open its help page by running `?penguins`.
+3.  `SocialMediaSum`: Sum of all the social media scores for a participant (higher scores mean more social media engagement).
+
+Before we begin, write down you predictions:
+
+-   Do you predict that mindfullness is positively or negatively related to happiness? Very strongly related, moderately, weakly, or not at all?
+
+-   Do you predict that social media use will be positively or negatively related to happiness? Very strongly, moderately, weakly, or not at all?
+
+-   Do you believe that those who identify as women would have different relationships to happiness than those who identify as woemen? What about those who marked 'other'?
 
 ### Ultimate goal {#sec-ultimate-goal}
 
@@ -95,56 +139,56 @@ Our ultimate goal in this chapter is to recreate the following visualization dis
 #| echo: false
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins, with a
+#|   A scatterplot of self-reported happiness and mindfullness in 
+#|   college students broken down by gender identification, with a
 #|   best fit line of the relationship between these two variables 
-#|   overlaid. The plot displays a positive, fairly linear, and relatively 
-#|   strong relationship between these two variables. Species (Adelie, 
-#|   Chinstrap, and Gentoo) are represented with different colors and 
-#|   shapes. The relationship between body mass and flipper length is 
-#|   roughly the same for these three species, and Gentoo penguins are 
-#|   larger than penguins from the other two species.
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point(aes(color = species, shape = species)) +
+#|   overlaid. The plot displays a positive, fairly linear, moderate
+#|   relationship between these two variables. Gender (Male, 
+#|   Female, and Other) are represented with different colors and 
+#|   shapes. The relationship between happiness and mindfullness is
+#|   similar across gender identification.  
+ggplot(eammi2, aes(x = MindfulnessScale, y = SWBscale, color = sex, shape = sex)) +
+  geom_point() +
   geom_smooth(method = "lm") +
   labs(
-    title = "Body mass and flipper length",
-    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)",
-    y = "Body mass (g)",
-    color = "Species",
-    shape = "Species"
+    title = "Mindfulness and Happiness",
+    subtitle = "For those identifying as male, female, or other",
+    x = "MIndfullness (1-7)",
+    y = "Happiness (1-7)",
+    color = "Gender",
+    shape = "Gender"
   ) +
-  scale_color_colorblind()
+  ggplot2::scale_color_brewer(type = "div")
 ```
 
 ### Creating a ggplot
 
 Let's recreate this plot step-by-step.
 
-With ggplot2, you begin a plot with the function `ggplot()`, defining a plot object that you then add **layers** to. The first argument of `ggplot()` is the dataset to use in the graph and so `ggplot(data = penguins)` creates an empty graph that is primed to display the `penguins` data, but since we haven't told it how to visualize it yet, for now it's empty. This is not a very exciting plot, but you can think of it like an empty canvas you'll paint the remaining layers of your plot onto.
+With ggplot2, you begin a plot with the function `ggplot()`, defining a plot object that you then add **layers** to. The first argument of `ggplot()` is the dataset to use in the graph and so `ggplot(data = eammi2)` creates an empty graph that is primed to display the `eammi2` data, but since we haven't told it how to visualize it yet, for now it's empty. This is not a very exciting plot, but you can think of it like an empty canvas you'll paint the remaining layers of your plot onto.
 
 ```{r}
 #| fig-alt: |
 #|   A blank, gray plot area.
-ggplot(data = penguins)
+ggplot(data = eammi2)
 ```
 
-Next, we need to tell `ggplot()` how the information from our data will be visually represented. The `mapping` argument of the `ggplot()` function defines how variables in your dataset are mapped to visual properties (**aesthetics**) of your plot. The `mapping` argument is always defined in the `aes()` function, and the `x` and `y` arguments of `aes()` specify which variables to map to the x and y axes. For now, we will only map flipper length to the `x` aesthetic and body mass to the `y` aesthetic. ggplot2 looks for the mapped variables in the `data` argument, in this case, `penguins`.
+Next, we need to tell `ggplot()` how the information from our data will be visually represented. The `mapping` argument of the `ggplot()` function defines how variables in your dataset are mapped to visual properties (**aesthetics**) of your plot. The `mapping` argument is always defined in the `aes()` function, and the `x` and `y` arguments of `aes()` specify which variables to map to the x and y axes. For now, we will only map mindfullness to the `x` aesthetic and happiness to the `y` aesthetic. ggplot2 looks for the mapped variables in the `data` argument, in this case, `eammi2`.
 
 The following plot shows the result of adding these mappings.
 
 ```{r}
 #| fig-alt: |
-#|   The plot shows flipper length on the x-axis, with values that range from 
-#|   170 to 230, and body mass on the y-axis, with values that range from 3000 
-#|   to 6000.
+#|   The plot shows mindfulness scores on the x-axis, with values that range from 
+#|   1 to 7, and happiness scores on the y-axis, with values that range from 1 
+#|   to 7.
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale)
 )
 ```
 
-Our empty canvas now has more structure -- it's clear where flipper lengths will be displayed (on the x-axis) and where body masses will be displayed (on the y-axis). But the penguins themselves are not yet on the plot. This is because we have not yet articulated, in our code, how to represent the observations from our data frame on our plot.
+Our empty canvas now has more structure -- it's clear where mindfulness scores will be displayed (on the x-axis) and where happiness will be displayed (on the y-axis). But the students themselves are not yet on the plot. This is because we have not yet articulated, in our code, how to represent the observations from our data frame on our plot.
 
 To do so, we need to define a **geom**: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with `geom_`. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (`geom_bar()`), line charts use line geoms (`geom_line()`), boxplots use boxplot geoms (`geom_boxplot()`), scatterplots use point geoms (`geom_point()`), and so on.
 
@@ -152,161 +196,139 @@ The function `geom_point()` adds a layer of points to your plot, which creates a
 
 ```{r}
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. The plot 
+#|   A scatterplot of mindfullness and happiness in colllege students.  The plot 
 #|   displays a positive, linear, and relatively strong relationship between 
 #|   these two variables.
+
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale)
 ) +
   geom_point()
 ```
 
-Now we have something that looks like what we might think of as a "scatterplot". It doesn't yet match our "ultimate goal" plot, but using this plot we can start answering the question that motivated our exploration: "What does the relationship between flipper length and body mass look like?" The relationship appears to be positive (as flipper length increases, so does body mass), fairly linear (the points are clustered around a line instead of a curve), and moderately strong (there isn't too much scatter around such a line). Penguins with longer flippers are generally larger in terms of their body mass.
+Now we have something that looks like what we might think of as a "scatterplot". It doesn't yet match our "ultimate goal" plot, but using this plot we can start answering the question that motivated our exploration: "What does the relationship between mindfullness and happiness look like?" The relationship appears to be positive (as mindfullness increases, so to does happiness, fairly linear (the points are clustered around a line instead of a curve), and fairly weak (while the trend is clear the points are scattered about rather than forming a perfect straight line). It looks like students who consider themselves mindful tend to be somewhat more happy than those who do not consider themselves mindful.
 
 Before we add more layers to this plot, let's pause for a moment and review the warning message we got:
 
-> Removed 2 rows containing missing values (`geom_point()`).
+> Removed 5 rows containing missing values or values outside the scale range (`geom_point()`).
 
-We're seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing. This type of warning is probably one of the most common types of warnings you will see when working with real data -- missing values are a very common issue and you'll learn more about them throughout the book, particularly in @sec-missing-values. For the remaining plots in this chapter we will suppress this warning so it's not printed alongside every single plot we make.
+We're seeing this message because there are five participants in our dataset with missing mindfullness or happiness values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing. This type of warning is probably one of the most common types of warnings you will see when working with real data -- missing values are a very common issue and we'll discuss them in more depth later in this course.
 
 ### Adding aesthetics and layers {#sec-adding-aesthetics-layers}
 
-Scatterplots are useful for displaying the relationship between two numerical variables, but it's always a good idea to be skeptical of any apparent relationship between two variables and ask if there may be other variables that explain or change the nature of this apparent relationship. For example, does the relationship between flipper length and body mass differ by species? Let's incorporate species into our plot and see if this reveals any additional insights into the apparent relationship between these variables. We will do this by representing species with different colored points.
+Scatterplots are useful for displaying the relationship between two numerical variables, but it's always a good idea to be skeptical of any apparent relationship between two variables and ask if there may be other variables that explain or change the nature of this apparent relationship. For example, does the relationship between mindfulness and happiness differ by gender? Let's incorporate gender identity into our plot and see if this reveals any additional insights into the apparent relationship between these variables (note that eammi2 coded gender as 'sex' – a common mistake, but notably incorrect).. We will do this by representing species with different colored points.
 
 To achieve this, will we need to modify the aesthetic or the geom? If you guessed "in the aesthetic mapping, inside of `aes()`", you're already getting the hang of creating data visualizations with ggplot2! And if not, don't worry. Throughout the book you will make many more ggplots and have many more opportunities to check your intuition as you make them.
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. The plot 
-#|   displays a positive, fairly linear, and relatively strong relationship 
-#|   between these two variables. Species (Adelie, Chinstrap, and Gentoo) 
+#|   A scatterplot of mindfullness and happiness in college students.
+#|   Gender identity (male, female, or 'other')
 #|   are represented with different colors.
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale, color = sex)
 ) +
   geom_point()
 ```
 
-When a categorical variable is mapped to an aesthetic, ggplot2 will automatically assign a unique value of the aesthetic (here a unique color) to each unique level of the variable (each of the three species), a process known as **scaling**. ggplot2 will also add a legend that explains which values correspond to which levels.
+When a categorical variable is mapped to an aesthetic, ggplot2 will automatically assign a unique value of the aesthetic (here a unique color) to each unique level of the variable (each of the three gender options the eammi2 survey provided), a process known as **scaling**. ggplot2 will also add a legend that explains which values correspond to which levels.
 
-Now let's add one more layer: a smooth curve displaying the relationship between body mass and flipper length. Before you proceed, refer back to the code above, and think about how we can add this to our existing plot.
+Now let's add one more layer: a smooth curve displaying the relationship between mindfulness and happiness. Before you proceed, refer back to the code above, and think about how we can add this to our existing plot.
 
 Since this is a new geometric object representing our data, we will add a new geom as a layer on top of our point geom: `geom_smooth()`. And we will specify that we want to draw the line of best fit based on a `l`inear `m`odel with `method = "lm"`.
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. Overlaid 
-#|   on the scatterplot are three smooth curves displaying the 
-#|   relationship between these variables for each species (Adelie, 
-#|   Chinstrap, and Gentoo). Different penguin species are plotted in 
+#|   A scatterplot of mindfullness and happiness of college students.  Overlaid 
+#|   on the scatterplot are four smooth curves displaying the 
+#|   relationship between these variables based on reported gender identity
+#|   (identified as male, female, or other).  Different
+#|   gender identities are plotted in 
 #|   different colors for the points and the smooth curves.
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale, color = sex)
 ) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
 
-We have successfully added lines, but this plot doesn't look like the plot from @sec-ultimate-goal, which only has one line for the entire dataset as opposed to separate lines for each of the penguin species.
-
-When aesthetic mappings are defined in `ggplot()`, at the *global* level, they're passed down to each of the subsequent geom layers of the plot. However, each geom function in ggplot2 can also take a `mapping` argument, which allows for aesthetic mappings at the *local* level that are added to those inherited from the global level. Since we want points to be colored based on species but don't want the lines to be separated out for them, we should specify `color = species` for `geom_point()` only.
-
-```{r}
-#| warning: false
-#| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. Overlaid 
-#|   on the scatterplot is a single line of best fit displaying the 
-#|   relationship between these variables for each species (Adelie, 
-#|   Chinstrap, and Gentoo). Different penguin species are plotted in 
-#|   different colors for the points only.
-ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-) +
-  geom_point(mapping = aes(color = species)) +
-  geom_smooth(method = "lm")
-```
-
-Voila! We have something that looks very much like our ultimate goal, though it's not yet perfect. We still need to use different shapes for each species of penguins and improve labels.
+This very much like our ultimate goal, though it's not yet perfect. We still need to use different shapes for each gender identity and improve labels.
 
 It's generally not a good idea to represent information using only colors on a plot, as people perceive colors differently due to color blindness or other color vision differences. Therefore, in addition to color, we can also map `species` to the `shape` aesthetic.
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. Overlaid 
-#|   on the scatterplot is a single line of best fit displaying the 
-#|   relationship between these variables for each species (Adelie, 
-#|   Chinstrap, and Gentoo). Different penguin species are plotted in 
-#|   different colors and shapes for the points only.
+#|   A scatterplot of mindfullness and happiness of college students.  Overlaid 
+#|   on the scatterplot are four smooth curves displaying the 
+#|   relationship between these variables based on reported gender identity
+#|   (identified as male, female, other).  Different
+#|   gender identities are plotted in 
+#|   different colors and shapes for the points and different colors for the 
+#|   prediction lines.
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale, color = sex, shape = sex)
 ) +
-  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_point() +
   geom_smooth(method = "lm")
 ```
 
 Note that the legend is automatically updated to reflect the different shapes of the points as well.
 
-And finally, we can improve the labels of our plot using the `labs()` function in a new layer. Some of the arguments to `labs()` might be self explanatory: `title` adds a title and `subtitle` adds a subtitle to the plot. Other arguments match the aesthetic mappings, `x` is the x-axis label, `y` is the y-axis label, and `color` and `shape` define the label for the legend. In addition, we can improve the color palette to be colorblind safe with the `scale_color_colorblind()` function from the ggthemes package.
+And finally, we can improve the labels of our plot using the `labs()` function in a new layer. Some of the arguments to `labs()` might be self explanatory: `title` adds a title and `subtitle` adds a subtitle to the plot. Other arguments match the aesthetic mappings, `x` is the x-axis label, `y` is the y-axis label, and `color` and `shape` define the label for the legend. In addition, we can improve the color palette with the `scale_color_brewer()` function, asking it for colors that are "div" for *divergent*, or different from one another.
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins, with a 
-#|   line of best fit displaying the relationship between these two variables 
-#|   overlaid. The plot displays a positive, fairly linear, and relatively 
-#|   strong relationship between these two variables. Species (Adelie, 
-#|   Chinstrap, and Gentoo) are represented with different colors and 
-#|   shapes. The relationship between body mass and flipper length is 
-#|   roughly the same for these three species, and Gentoo penguins are 
-#|   larger than penguins from the other two species.
+#|   A scatterplot of mindfullness and happiness in college students, with
+#|   lines of best fit displaying the relationship between these two variables 
+#|   overlaid broken down by gender identity.
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  data = eammi2,
+  mapping = aes(x = MindfulnessScale, y = SWBscale, color = sex, shape = sex)
 ) +
-  geom_point(aes(color = species, shape = species)) +
-  geom_smooth(method = "lm") +
+  geom_point() +
+  geom_smooth(method = "lm") + 
   labs(
-    title = "Body mass and flipper length",
-    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)", y = "Body mass (g)",
-    color = "Species", shape = "Species"
+    title = "Mindfulness and Happiness",
+    subtitle = "For those identifying as male, female, or other",
+    x = "MIndfullness (1-7)",
+    y = "Happiness (1-7)",
+    color = "Gender",
+    shape = "Gender"
   ) +
-  scale_color_colorblind()
+  scale_color_brewer(type = "div")
 ```
 
 We finally have a plot that perfectly matches our "ultimate goal"!
 
 ### Exercises
 
-1.  How many rows are in `penguins`? How many columns?
+1.  There are lots of dots on top of each other. Can you figure out how to use the alpha argument of geom_point to make the dots semi-transparent?
 
-2.  What does the `bill_depth_mm` variable in the `penguins` data frame describe? Read the help for `?penguins` to find out.
+2.  How many rows are in `eammi2`? How many columns?
 
-3.  Make a scatterplot of `bill_depth_mm` vs. `bill_length_mm`. That is, make a scatterplot with `bill_depth_mm` on the y-axis and `bill_length_mm` on the x-axis. Describe the relationship between these two variables.
+3.  What does the `na.rm` argument do in `geom_point()`? What is the default value of the argument? Create a scatterplot where you successfully use this argument set to `TRUE`.
 
-4.  What happens if you make a scatterplot of `species` vs. `bill_depth_mm`? What might be a better choice of geom?
+4.  Make a scatterplot of `SocMediaSum` vs. `SWBScale`. That is, make a scatterplot with `SWBScale` on the y-axis and `SocMediaSum` on the x-axis. Describe the relationship between these two variables.
 
 5.  Why does the following give an error and how would you fix it?
 
     ```{r}
     #| eval: false
-    ggplot(data = penguins) + 
+    ggplot(data = eammi2) + 
       geom_point()
     ```
 
-6.  What does the `na.rm` argument do in `geom_point()`? What is the default value of the argument? Create a scatterplot where you successfully use this argument set to `TRUE`.
+6.  Add the following caption to the plot you made in the previous exercise: "Data come from Grahe et al. (2018), doi:10.5334/jopd.38." Hint: Take a look at the documentation for `labs()`.
 
-7.  Add the following caption to the plot you made in the previous exercise: "Data come from the palmerpenguins package." Hint: Take a look at the documentation for `labs()`.
-
-8.  Recreate the following visualization. What aesthetic should `bill_depth_mm` be mapped to? And should it be mapped at the global level or at the geom level?
+7.  Recreate the following visualization. What aesthetic should `RaceCoded` be mapped to?
 
     ```{r}
     #| echo: false
@@ -317,45 +339,23 @@ We finally have a plot that perfectly matches our "ultimate goal"!
     #|   and flipper length is overlaid. The relationship is positive, 
     #|   fairly linear, and moderately strong.
     ggplot(
-      data = penguins,
-      mapping = aes(x = flipper_length_mm, y = body_mass_g)
+      data = eammi2,
+      mapping = aes(x = Stress, y = SWBscale)
     ) +
-      geom_point(aes(color = bill_depth_mm)) +
+      geom_point(aes(color = RaceCoded)) +
       geom_smooth()
     ```
 
-9.  Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.
+8.  Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.
 
     ```{r}
     #| eval: false
     ggplot(
-      data = penguins,
-      mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island)
+      data = eammi2,
+      mapping = aes(x = Stress, y = SWBscale, color = AnyDisability)
     ) +
       geom_point() +
       geom_smooth(se = FALSE)
-    ```
-
-10. Will these two graphs look different? Why/why not?
-
-    ```{r}
-    #| eval: false
-    ggplot(
-      data = penguins,
-      mapping = aes(x = flipper_length_mm, y = body_mass_g)
-    ) +
-      geom_point() +
-      geom_smooth()
-
-    ggplot() +
-      geom_point(
-        data = penguins,
-        mapping = aes(x = flipper_length_mm, y = body_mass_g)
-      ) +
-      geom_smooth(
-        data = penguins,
-        mapping = aes(x = flipper_length_mm, y = body_mass_g)
-      )
     ```
 
 ## ggplot2 calls {#sec-ggplot2-calls}
@@ -365,30 +365,21 @@ As we move on from these introductory sections, we'll transition to a more conci
 ```{r}
 #| eval: false
 ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  data = eammi2,
+  mapping = aes(x = Stress, y = SWBscale)
 ) +
   geom_point()
 ```
 
-Typically, the first one or two arguments to a function are so important that you should know them by heart. The first two arguments to `ggplot()` are `data` and `mapping`, in the remainder of the book, we won't supply those names. That saves typing, and, by reducing the amount of extra text, makes it easier to see what's different between plots. That's a really important programming concern that we'll come back to in @sec-functions.
-
-Rewriting the previous plot more concisely yields:
+Often, R coders will omit the names of the arguments, relying on the fact that data is always the first argument and mapping is always second. This saves time in typing, but it makes the code harder to read and it is also a bit dangerous – it's better to tell R exactly what you mean! So, this previous plot could be written like this:
 
 ```{r}
 #| eval: false
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
+ggplot(eammi2, aes(x = Stress, y = SWBscale)) + 
   geom_point()
 ```
 
-In the future, you'll also learn about the pipe, `|>`, which will allow you to create that plot with:
-
-```{r}
-#| eval: false
-penguins |> 
-  ggplot(aes(x = flipper_length_mm, y = body_mass_g)) + 
-  geom_point()
-```
+Some people feel that's simpler and better, but I try to avoid short-cuts in my code.
 
 ## Visualizing distributions
 
@@ -400,26 +391,10 @@ A variable is **categorical** if it can only take one of a small set of values. 
 
 ```{r}
 #| fig-alt: |
-#|   A bar chart of frequencies of species of penguins: Adelie 
-#|   (approximately 150), Chinstrap (approximately 90), Gentoo 
-#|   (approximately 125).
-ggplot(penguins, aes(x = species)) +
+#|   A bar chart of frequencies of racial identification
+ggplot(eammi2, aes(x = RaceCoded)) +
   geom_bar()
 ```
-
-In bar plots of categorical variables with non-ordered levels, like the penguin `species` above, it's often preferable to reorder the bars based on their frequencies. Doing so requires transforming the variable to a factor (how R handles categorical data) and then reordering the levels of that factor.
-
-```{r}
-#| fig-alt: |
-#|   A bar chart of frequencies of species of penguins, where the bars are 
-#|   ordered in decreasing order of their heights (frequencies): Adelie 
-#|   (approximately 150), Gentoo (approximately 125), Chinstrap 
-#|   (approximately 90).
-ggplot(penguins, aes(x = fct_infreq(species))) +
-  geom_bar()
-```
-
-You will learn more about factors and functions for dealing with factors (like `fct_infreq()` shown above) in @sec-factors.
 
 ### A numerical variable
 
@@ -430,59 +405,52 @@ One commonly used visualization for distributions of continuous variables is a h
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A histogram of body masses of penguins. The distribution is unimodal 
-#|   and right skewed, ranging between approximately 2500 to 6500 grams.
-ggplot(penguins, aes(x = body_mass_g)) +
-  geom_histogram(binwidth = 200)
+#|   A histogram of ages of EAMMI2 participants.  The distribution is unimodal 
+#|   and heavily right skewed.
+ggplot(eammi2, aes(x = age)) +
+  geom_histogram()
 ```
 
-A histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin. In the graph above, the tallest bar shows that 39 observations have a `body_mass_g` value between 3,500 and 3,700 grams, which are the left and right edges of the bar.
+A histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin. In the graph above, the tallest bar shows that over 800 participants had an `age` of 19.
 
-You can set the width of the intervals in a histogram with the binwidth argument, which is measured in the units of the `x` variable. You should always explore a variety of binwidths when working with histograms, as different binwidths can reveal different patterns. In the plots below a binwidth of 20 is too narrow, resulting in too many bars, making it difficult to determine the shape of the distribution. Similarly, a binwidth of 2,000 is too high, resulting in all data being binned into only three bars, and also making it difficult to determine the shape of the distribution. A binwidth of 200 provides a sensible balance.
+You can set the width of the intervals in a histogram with the binwidth argument, which is measured in the units of the `x` variable. You should always explore a variety of binwidths when working with histograms, as different binwidths can reveal different patterns.
 
 ```{r}
 #| warning: false
 #| layout-ncol: 2
 #| fig-width: 3
 #| fig-alt: |
-#|   Two histograms of body masses of penguins, one with binwidth of 20 
-#|   (left) and one with binwidth of 2000 (right). The histogram with binwidth 
-#|   of 20 shows lots of ups and downs in the heights of the bins, creating a 
-#|   jagged outline. The histogram  with binwidth of 2000 shows only three bins.
-ggplot(penguins, aes(x = body_mass_g)) +
-  geom_histogram(binwidth = 20)
-ggplot(penguins, aes(x = body_mass_g)) +
-  geom_histogram(binwidth = 2000)
+#|   Two histograms of age of eami2 participants, one with binwidth of 10 
+#|   (left) and one with binwidth of 1 (right).
+ggplot(eammi2, aes(x = age)) +
+  geom_histogram(binwidth = 10)
+ggplot(eammi2, aes(x = age)) +
+  geom_histogram(binwidth = 1)
 ```
 
 An alternative visualization for distributions of numerical variables is a density plot. A density plot is a smoothed-out version of a histogram and a practical alternative, particularly for continuous data that comes from an underlying smooth distribution. We won't go into how `geom_density()` estimates the density (you can read more about that in the function documentation), but let's explain how the density curve is drawn with an analogy. Imagine a histogram made out of wooden blocks. Then, imagine that you drop a cooked spaghetti string over it. The shape the spaghetti will take draped over blocks can be thought of as the shape of the density curve. It shows fewer details than a histogram but can make it easier to quickly glean the shape of the distribution, particularly with respect to modes and skewness.
 
 ```{r}
 #| fig-alt: |
-#|   A density plot of body masses of penguins. The distribution is unimodal 
-#|   and right skewed, ranging between approximately 2500 to 6500 grams.
-ggplot(penguins, aes(x = body_mass_g)) +
+#|   A density plot of ages of eammi2 participants.
+ggplot(eammi2, aes(x = age)) +
   geom_density()
 ```
 
 ### Exercises
 
-1.  Make a bar plot of `species` of `penguins`, where you assign `species` to the `y` aesthetic. How is this plot different?
-
-2.  How are the following two plots different? Which aesthetic, `color` or `fill`, is more useful for changing the color of bars?
+1.  How are the following two plots different? Which aesthetic, `color` or `fill`, is more useful for changing the color of bars?
 
     ```{r}
     #| eval: false
-    ggplot(penguins, aes(x = species)) +
+    ggplot(eammi2, aes(x = RaceCoded)) +
       geom_bar(color = "red")
 
-    ggplot(penguins, aes(x = species)) +
+    ggplot(eammi2, aes(x = RaceCoded)) +
       geom_bar(fill = "red")
     ```
 
-3.  What does the `bins` argument in `geom_histogram()` do?
-
-4.  Make a histogram of the `carat` variable in the `diamonds` dataset that is available when you load the tidyverse package. Experiment with different binwidths. What binwidth reveals the most interesting patterns?
+2.  Make a histogram of the `carat` variable in the `diamonds` dataset that is available in R. Experiment with different binwidths. What binwidth reveals the most interesting patterns?
 
 ## Visualizing relationships
 
@@ -509,18 +477,14 @@ To visualize the relationship between a numerical and a categorical variable we 
 knitr::include_graphics("images/EDA-boxplot.png")
 ```
 
-Let's take a look at the distribution of body mass by species using `geom_boxplot()`:
+Let's take a look at the distribution of happiness by race using `geom_boxplot()`:
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   Side-by-side box plots of distributions of body masses of Adelie, 
-#|   Chinstrap, and Gentoo penguins. The distribution of Adelie and 
-#|   Chinstrap penguins' body masses appear to be symmetric with 
-#|   medians around 3750 grams. The median body mass of Gentoo penguins 
-#|   is much higher, around 5000 grams, and the distribution of the 
-#|   body masses of these penguins appears to be somewhat right skewed.
-ggplot(penguins, aes(x = species, y = body_mass_g)) +
+#|   Side-by-side box plots of distributions of self-reported stress levesl by
+#|   gender identity.
+ggplot(eammi2, aes(x = sex, y = Stress)) +
   geom_boxplot()
 ```
 
@@ -529,10 +493,9 @@ Alternatively, we can make density plots with `geom_density()`.
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A density plot of body masses of penguins by species of penguins. Each 
-#|   species (Adelie, Chinstrap, and Gentoo) is represented with different 
-#|   colored outlines for the density curves.
-ggplot(penguins, aes(x = body_mass_g, color = species)) +
+#|   A density plot of stress levels of penguins with gender identity represented 
+#|   with different colored outlines for the density curves.
+ggplot(eammi2, aes(x = Stress, color = sex)) +
   geom_density(linewidth = 0.75)
 ```
 
@@ -543,11 +506,11 @@ Additionally, we can map `species` to both `color` and `fill` aesthetics and use
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A density plot of body masses of penguins by species of penguins. Each 
-#|   species (Adelie, Chinstrap, and Gentoo) is represented in different 
+#|   A density plot of stress levels by gender identity where 
+#|   gender identity is represented in different 
 #|   colored outlines for the density curves. The density curves are also 
 #|   filled with the same colors, with some transparency added.
-ggplot(penguins, aes(x = body_mass_g, color = species, fill = species)) +
+ggplot(eammi2, aes(x = Stress, color = sex, fill = sex)) +
   geom_density(alpha = 0.5)
 ```
 
@@ -558,25 +521,25 @@ Note the terminology we have used here:
 
 ### Two categorical variables
 
-We can use stacked bar plots to visualize the relationship between two categorical variables. For example, the following two stacked bar plots both display the relationship between `island` and `species`, or specifically, visualizing the distribution of `species` within each island.
+We can use stacked bar plots to visualize the relationship between two categorical variables. For example, the following two stacked bar plots both display the relationship between `sex` and `AnyDisibility`, or specifically, visualizing the distribution of `AnyDisibility` within each gender identity.
 
 The first plot shows the frequencies of each species of penguins on each island. The plot of frequencies shows that there are equal numbers of Adelies on each island. But we don't have a good sense of the percentage balance within each island.
 
 ```{r}
 #| fig-alt: |
-#|   Bar plots of penguin species by island (Biscoe, Dream, and Torgersen)
-ggplot(penguins, aes(x = island, fill = species)) +
+#|   Bar plots of AnyDisibility by Gender Identity
+ggplot(eammi2, aes(x = sex, fill = AnyDisability)) +
   geom_bar()
 ```
 
-The second plot, a relative frequency plot created by setting `position = "fill"` in the geom, is more useful for comparing species distributions across islands since it's not affected by the unequal numbers of penguins across the islands. Using this plot we can see that Gentoo penguins all live on Biscoe island and make up roughly 75% of the penguins on that island, Chinstrap all live on Dream island and make up roughly 50% of the penguins on that island, and Adelie live on all three islands and make up all of the penguins on Torgersen.
+The second plot, a relative frequency plot created by setting `position = "fill"` in the geom, is more useful for comparing disability status across gender identities since it's not affected by the unequal numbers of participants of different genders.
 
 ```{r}
 #| fig-alt: |
 #|   Bar plots of penguin species by island (Biscoe, Dream, and Torgersen)
 #|   the bars are scaled to the same height, making it a relative frequencies 
 #|   plot
-ggplot(penguins, aes(x = island, fill = species)) +
+ggplot(eammi2, aes(x = sex, fill = AnyDisability)) +
   geom_bar(position = "fill")
 ```
 
@@ -592,46 +555,38 @@ So far you've learned about scatterplots (created with `geom_point()`) and smoot
 #|   A scatterplot of body mass vs. flipper length of penguins. The plot 
 #|   displays a positive, linear, relatively strong relationship between 
 #|   these two variables.
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+ggplot(eammi2, aes(x = age, y = BelongingScale)) +
   geom_point()
 ```
 
 ### Three or more variables
 
-As we saw in @sec-adding-aesthetics-layers, we can incorporate more variables into a plot by mapping them to additional aesthetics. For example, in the following scatterplot the colors of points represent species and the shapes of points represent islands.
+As we saw in @sec-adding-aesthetics-layers, we can incorporate more variables into a plot by mapping them to additional aesthetics.
 
 ```{r}
 #| warning: false
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. The plot 
-#|   displays a positive, linear, relatively strong relationship between 
-#|   these two variables. The points are colored based on the species of the 
-#|   penguins and the shapes of the points represent islands (round points are 
-#|   Biscoe island, triangles are Dream island, and squared are Torgersen 
-#|   island). The plot is very busy and it's difficult to distinguish the shapes
+#|   The plot is very busy and it's difficult to distinguish the shapes
 #|   of the points.
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point(aes(color = species, shape = island))
+ggplot(eammi2, aes(x = SWBscale, y = Stress)) +
+  geom_point(aes(color = sex, shape = RaceCoded))
 ```
 
 However adding too many aesthetic mappings to a plot makes it cluttered and difficult to make sense of. Another way, which is particularly useful for categorical variables, is to split your plot into **facets**, subplots that each display one subset of the data.
 
-To facet your plot by a single variable, use `facet_wrap()`. The first argument of `facet_wrap()` is a formula[^day_1_first_graph-3], which you create with `~` followed by a variable name. The variable that you pass to `facet_wrap()` should be categorical.
+To facet your plot by a single variable, use `facet_wrap()`. The first argument of `facet_wrap()` is a formula[^day_1_first_graph-1], which you create with `~` followed by a variable name. The variable that you pass to `facet_wrap()` should be categorical.
 
-[^day_1_first_graph-3]: Here "formula" is the name of the thing created by `~`, not a synonym for "equation".
+[^day_1_first_graph-1]: Here "formula" is the name of the thing created by `~`, not a synonym for "equation".
 
 ```{r}
 #| warning: false
 #| fig-width: 8
 #| fig-asp: 0.33
 #| fig-alt: |
-#|   A scatterplot of body mass vs. flipper length of penguins. The shapes and 
-#|   colors of points represent species. Penguins from each island are on a 
-#|   separate facet. Within each facet, the relationship between body mass and 
-#|   flipper length is positive, linear, relatively strong. 
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point(aes(color = species, shape = species)) +
-  facet_wrap(~island)
+#|   A scatterplot of stress and happiness by identified gender and race.
+ggplot(eammi2, aes(x = SWBscale, y = Stress)) +
+  geom_point(aes(color = sex, shape = sex)) +
+  facet_wrap(~RaceCoded)
 ```
 
 You will learn about many other geoms for visualizing distributions of variables and relationships between them in @sec-layers.
@@ -654,23 +609,23 @@ You will learn about many other geoms for visualizing distributions of variables
     #| warning: false
     #| fig-show: hide
     ggplot(
-      data = penguins,
+      data = eammi2,
       mapping = aes(
-        x = bill_length_mm, y = bill_depth_mm, 
-        color = species, shape = species
+        x = Stress, y = SWBscale, 
+        color = sex, shape = sex
       )
     ) +
       geom_point() +
-      labs(color = "Species")
+      labs(color = "Gender")
     ```
 
 7.  Create the two following stacked bar plots. Which question can you answer with the first one? Which question can you answer with the second one?
 
     ```{r}
     #| fig-show: hide
-    ggplot(penguins, aes(x = island, fill = species)) +
+    ggplot(eammi2, aes(x = sex, fill = marriage5)) +
       geom_bar(position = "fill")
-    ggplot(penguins, aes(x = species, fill = island)) +
+    ggplot(eammi2, aes(x = marriage5, fill = sex)) +
       geom_bar(position = "fill")
     ```
 
@@ -681,14 +636,15 @@ Once you've made a plot, you might want to get it out of R by saving it as an im
 ```{r}
 #| fig-show: hide
 #| warning: false
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point()
-ggsave(filename = "penguin-plot.png")
+ggplot(eammi2, aes(x = SWBscale, y = Stress)) +
+  geom_point(aes(color = sex, shape = sex)) +
+  facet_wrap(~RaceCoded)
+ggsave(filename = "stress_happiness_by_sex_and_race.png")
 ```
 
 ```{r}
 #| include: false
-file.remove("penguin-plot.png")
+file.remove("stress_happiness_by_sex_and_race.png")
 ```
 
 This will save your plot to your working directory, a concept you'll learn more about in @sec-workflow-scripts-projects.
@@ -734,6 +690,6 @@ If that doesn't help, carefully read the error message. Sometimes the answer wil
 
 In this chapter, you've learned the basics of data visualization with ggplot2. We started with the basic idea that underpins ggplot2: a visualization is a mapping from variables in your data to aesthetic properties like position, color, size and shape. You then learned about increasing the complexity and improving the presentation of your plots layer-by-layer. You also learned about commonly used plots for visualizing the distribution of a single variable as well as for visualizing relationships between two or more variables, by leveraging additional aesthetic mappings and/or splitting your plot into small multiples using faceting.
 
-We'll use visualizations again and again throughout this book, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in @sec-layers through @sec-communication.
+We'll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in @sec-layers through @sec-communication.
 
 With the basics of visualization under your belt, in the next chapter we're going to switch gears a little and give you some practical workflow advice. We intersperse workflow advice with data science tools throughout this part of the book because it'll help you stay organized as you write increasing amounts of R code.
