@@ -1,0 +1,34 @@
+# Help {#sec-day-help}
+
+```{r}
+#| echo: false
+source("_common.R")
+```
+
+This class is not a complete guide to R. In fact, there is no *single* comprehensive source that would let you master all of R. You will soon find questions that we do not answer. This section describes a few tips on how to get help and to help you keep learning.
+
+## Some Formal Books/Courses
+
+-   *R For Data Science* by Hadley Wickham, Mine Cetinkaya-Rundel & Garrett Grolemund : <https://r4ds.hadley.nz/>
+
+    -   This is our textbook for the course! But I've cut this book down and simplified a good bit. You should check out the real deal; It is a free e-book in its 2nd edition written by the folks who know R best
+
+-   The education wing of the RStudio team has links to fantastic resources: <https://education.rstudio.com/learn/beginner/>
+
+-   Quick primers on different tasks in R: <https://posit.cloud/learn/recipes>
+
+## Google is your friend
+
+If you get stuck, start with Google. Typically adding "R" to a query is enough to restrict it to relevant results: if the search isn't useful, it often means that there aren't any R-specific results available. Additionally, adding package names like "tidyverse" or "ggplot2" will help narrow down the results to code that will feel more familiar to you as well, e.g., "how to make a boxplot in R" vs. "how to make a boxplot in R with ggplot2". Google is particularly useful for error messages. If you get an error message and you have no idea what it means, try googling it! Chances are that someone else has been confused by it in the past, and there will be help somewhere on the web. (If the error message isn't in English, run `Sys.setenv(LANGUAGE = "en")` and re-run the code; you're more likely to find help for English error messages.)
+
+If Google doesn't help, try [Stack Overflow](https://stackoverflow.com). Start by spending a little time searching for an existing answer, including `[R]`, to restrict your search to questions and answers that use R.
+
+## Investing in yourself
+
+You should also spend some time preparing yourself to solve problems before they occur. Investing a little time in learning R each day will pay off handsomely in the long run. One way is to follow what the tidyverse team is doing on the [tidyverse blog](https://www.tidyverse.org/blog/). To keep up with the R community more broadly, we recommend reading [R Weekly](https://rweekly.org): it's a community effort to aggregate the most interesting news in the R community each week.
+
+## Summary
+
+This chapter concludes the Whole Game part of the book. You've now seen the most important parts of the data science process: visualization, transformation, tidying and importing. Now you've got a holistic view of the whole process, and we start to get into the details of small pieces.
+
+The next part of the book, Visualize, does a deeper dive into the grammar of graphics and creating data visualizations with ggplot2, showcases how to use the tools you've learned so far to conduct exploratory data analysis, and introduces good practices for creating plots for communication.

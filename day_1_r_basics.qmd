@@ -5,7 +5,9 @@
 source("_common.R")
 ```
 
-You now have some experience running R code. We didn't give you many details, but you've obviously figured out the basics, or you would've thrown this book away in frustration! Frustration is natural when you start programming in R because it is such a stickler for punctuation, and even one character out of place can cause it to complain. But while you should expect to be a little frustrated, take comfort in that this experience is typical and temporary: it happens to everyone, and the only way to get over it is to keep trying.
+You now have some experience running R code. We jumped in without details, but you made it through... though perhaps with some frustration?
+
+Frustration is natural when you start programming in R because it is such a stickler for punctuation, and even one character out of place can cause it to complain. But while you should expect to be a little frustrated, take comfort in that this experience is typical and temporary: it happens to everyone, and the only way to get over it is to keep trying.
 
 Before we go any further, let's ensure you've got a solid foundation in running R code and that you know some of the most helpful RStudio features.
 
@@ -85,7 +87,7 @@ some.people.use.periods
 And_aFew.People_RENOUNCEconvention
 ```
 
-We'll return to names again when we discuss code style in @sec-workflow-style.
+We'll return to names again when we discuss code style in @sec-day-1-style
 
 You can inspect an object by typing its name:
 
@@ -207,4 +209,4 @@ knitr::include_graphics("screenshots/rstudio-env.png")
 
 ## Summary
 
-Now that you've learned a little more about how R code works, and some tips to help you understand your code when you come back to it in the future. In the next chapter, we'll continue your data science journey by teaching you about dplyr, the tidyverse package that helps you transform data, whether it's selecting important variables, filtering down to rows of interest, or computing summary statistics.
+Now that you've learned a little more about how R code works, and some tips to help you understand your code when you come back to it in the future. In the next chapter, we'll continue your data science journey by teaching you about coding style..

@@ -114,7 +114,10 @@ In this context, a variable refers to an attribute of all the college students, 
 
 The head function lets you view the first few rows of a dataframe:.
 
+```{r}
+#| eval: false
 head(eammi2)
+```
 
 This data frame contains `r ncol(eammi2)` columns. In RStudio, run `View(eammi2)` to open an interactive data viewer.
 
@@ -195,7 +198,7 @@ Our empty canvas now has more structure -- it's clear where mindfulness scores w
 
 To do so, we need to define a **geom**: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with `geom_`. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (`geom_bar()`), line charts use line geoms (`geom_line()`), boxplots use boxplot geoms (`geom_boxplot()`), scatterplots use point geoms (`geom_point()`), and so on.
 
-The function `geom_point()` adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You'll learn a whole bunch of geoms throughout the book, particularly in @sec-layers.
+The function `geom_point()` adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You'll learn a whole bunch of geoms throughout the book, particularly in @sec-day-2-layers.
 
 ```{r}
 #| fig-alt: |
@@ -592,7 +595,7 @@ ggplot(eammi2, aes(x = SWBscale, y = Stress)) +
   facet_wrap(~RaceCoded)
 ```
 
-You will learn about many other geoms for visualizing distributions of variables and relationships between them in @sec-layers.
+You will learn about many other geoms for visualizing distributions of variables and relationships between them in @sec-day-2-layers.
 
 ### Exercises
 
@@ -650,11 +653,11 @@ ggsave(filename = "stress_happiness_by_sex_and_race.png")
 file.remove("stress_happiness_by_sex_and_race.png")
 ```
 
-This will save your plot to your working directory, a concept you'll learn more about in @sec-workflow-scripts-projects.
+This will save your plot to your working directory, a concept you'll learn more about in @sec-day-1-scripts
 
 If you don't specify the `width` and `height` they will be taken from the dimensions of the current plotting device. For reproducible code, you'll want to specify them. You can learn more about `ggsave()` in the documentation.
 
-Generally, however, we recommend that you assemble your final reports using Quarto, a reproducible authoring system that allows you to interleave your code and your prose and automatically include your plots in your write-ups. You will learn more about Quarto in @sec-quarto.
+Generally, however, we recommend that you assemble your final reports using Quarto, a reproducible authoring system that allows you to interleave your code and your prose and automatically include your plots in your write-ups. You will learn more about Quarto in @sec-day-3-overview .
 
 ### Exercises
 
@@ -693,6 +696,6 @@ If that doesn't help, carefully read the error message. Sometimes the answer wil
 
 In this chapter, you've learned the basics of data visualization with ggplot2. We started with the basic idea that underpins ggplot2: a visualization is a mapping from variables in your data to aesthetic properties like position, color, size and shape. You then learned about increasing the complexity and improving the presentation of your plots layer-by-layer. You also learned about commonly used plots for visualizing the distribution of a single variable as well as for visualizing relationships between two or more variables, by leveraging additional aesthetic mappings and/or splitting your plot into small multiples using faceting.
 
-We'll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in @sec-layers through @sec-communication.
+We'll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in @sec-day-2-layers through @sec-day-2-communication.
 
 With the basics of visualization under your belt, in the next chapter we're going to switch gears a little and give you some practical workflow advice. We intersperse workflow advice with data science tools throughout this part of the book because it'll help you stay organized as you write increasing amounts of R code.

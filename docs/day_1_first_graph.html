@@ -181,8 +181,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./day_1_style.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R Style</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day_1_scripts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R Scripts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day_1_help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Help</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./day_1_assignments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">D1 Assignment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">D1 Assignment</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,19 +217,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_2_layers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_2_exploring.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_2_communication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
   </div>
 </li>
       </ul>
@@ -228,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_3_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Day 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Day 3</span></span></a>
   </div>
 </li>
       </ul>
@@ -245,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_4_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Day 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Day 4</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_5_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Day 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Day 5</span></span></a>
   </div>
 </li>
       </ul>
@@ -394,7 +412,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>In this context, a variable refers to an attribute of all the college students, and an observation refers to all the attributes of a single college student.</p>
 <p>The head function lets you view the first few rows of a dataframe:.</p>
-<p>head(eammi2)</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">eammi2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This data frame contains 479 columns. In RStudio, run <code>View(eammi2)</code> to open an interactive data viewer.</p>
 <p>Among the variables</p>
 <ol type="1">
@@ -413,7 +433,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" alt="A scatterplot of self-reported happiness and mindfullness in  college students broken down by gender identification, with a best fit line of the relationship between these two variables  overlaid. The plot displays a positive, fairly linear, moderate relationship between these two variables. Gender (Male,  Female, and Other) are represented with different colors and  shapes. The relationship between happiness and mindfullness is similar across gender identification.  " width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" alt="A scatterplot of self-reported happiness and mindfullness in  college students broken down by gender identification, with a best fit line of the relationship between these two variables  overlaid. The plot displays a positive, fairly linear, moderate relationship between these two variables. Gender (Male,  Female, and Other) are represented with different colors and  shapes. The relationship between happiness and mindfullness is similar across gender identification.  " width="576"></p>
 </figure>
 </div>
 </div>
@@ -423,10 +443,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Let’s recreate this plot step-by-step.</p>
 <p>With ggplot2, you begin a plot with the function <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>, defining a plot object that you then add <strong>layers</strong> to. The first argument of <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> is the dataset to use in the graph and so <code>ggplot(data = eammi2)</code> creates an empty graph that is primed to display the <code>eammi2</code> data, but since we haven’t told it how to visualize it yet, for now it’s empty. This is not a very exciting plot, but you can think of it like an empty canvas you’ll paint the remaining layers of your plot onto.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">eammi2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">eammi2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" alt="A blank, gray plot area." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" alt="A blank, gray plot area." width="576"></p>
 </figure>
 </div>
 </div>
@@ -434,22 +454,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Next, we need to tell <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> how the information from our data will be visually represented. The <code>mapping</code> argument of the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function defines how variables in your dataset are mapped to visual properties (<strong>aesthetics</strong>) of your plot. The <code>mapping</code> argument is always defined in the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> function, and the <code>x</code> and <code>y</code> arguments of <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> specify which variables to map to the x and y axes. For now, we will only map mindfullness to the <code>x</code> aesthetic and happiness to the <code>y</code> aesthetic. ggplot2 looks for the mapped variables in the <code>data</code> argument, in this case, <code>eammi2</code>.</p>
 <p>The following plot shows the result of adding these mappings.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" alt="The plot shows mindfulness scores on the x-axis, with values that range from  1 to 7, and happiness scores on the y-axis, with values that range from 1  to 7." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" alt="The plot shows mindfulness scores on the x-axis, with values that range from  1 to 7, and happiness scores on the y-axis, with values that range from 1  to 7." width="576"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Our empty canvas now has more structure – it’s clear where mindfulness scores will be displayed (on the x-axis) and where happiness will be displayed (on the y-axis). But the students themselves are not yet on the plot. This is because we have not yet articulated, in our code, how to represent the observations from our data frame on our plot.</p>
 <p>To do so, we need to define a <strong>geom</strong>: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with <code>geom_</code>. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code>), line charts use line geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code>), boxplots use boxplot geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code>), scatterplots use point geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>), and so on.</p>
-<p>The function <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You’ll learn a whole bunch of geoms throughout the book, particularly in <span class="quarto-unresolved-ref">?sec-layers</span>.</p>
+<p>The function <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You’ll learn a whole bunch of geoms throughout the book, particularly in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -458,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">#&gt; (`geom_point()`).</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in colllege students.  The plot  displays a positive, linear, and relatively strong relationship between  these two variables." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in colllege students.  The plot  displays a positive, linear, and relatively strong relationship between  these two variables." width="576"></p>
 </figure>
 </div>
 </div>
@@ -474,14 +494,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Scatterplots are useful for displaying the relationship between two numerical variables, but it’s always a good idea to be skeptical of any apparent relationship between two variables and ask if there may be other variables that explain or change the nature of this apparent relationship. For example, does the relationship between mindfulness and happiness differ by gender? Let’s incorporate gender identity into our plot and see if this reveals any additional insights into the apparent relationship between these variables (note that eammi2 coded gender as ‘sex’ – a common mistake, but notably incorrect).. We will do this by representing species with different colored points.</p>
 <p>To achieve this, will we need to modify the aesthetic or the geom? If you guessed “in the aesthetic mapping, inside of <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>”, you’re already getting the hang of creating data visualizations with ggplot2! And if not, don’t worry. Throughout the book you will make many more ggplots and have many more opportunities to check your intuition as you make them.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in college students. Gender identity (male, female, or 'other') are represented with different colors." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in college students. Gender identity (male, female, or 'other') are represented with different colors." width="576"></p>
 </figure>
 </div>
 </div>
@@ -490,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now let’s add one more layer: a smooth curve displaying the relationship between mindfulness and happiness. Before you proceed, refer back to the code above, and think about how we can add this to our existing plot.</p>
 <p>Since this is a new geometric object representing our data, we will add a new geom as a layer on top of our point geom: <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth()</a></code>. And we will specify that we want to draw the line of best fit based on a <code>l</code>inear <code>m</code>odel with <code>method = "lm"</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -498,7 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness of college students.  Overlaid  on the scatterplot are four smooth curves displaying the  relationship between these variables based on reported gender identity (identified as male, female, or other).  Different gender identities are plotted in  different colors for the points and the smooth curves." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness of college students.  Overlaid  on the scatterplot are four smooth curves displaying the  relationship between these variables based on reported gender identity (identified as male, female, or other).  Different gender identities are plotted in  different colors for the points and the smooth curves." width="576"></p>
 </figure>
 </div>
 </div>
@@ -506,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This very much like our ultimate goal, though it’s not yet perfect. We still need to use different shapes for each gender identity and improve labels.</p>
 <p>It’s generally not a good idea to represent information using only colors on a plot, as people perceive colors differently due to color blindness or other color vision differences. Therefore, in addition to color, we can also map <code>species</code> to the <code>shape</code> aesthetic.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, color <span class="op">=</span> <span class="va">sex</span>, shape <span class="op">=</span> <span class="va">sex</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -514,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness of college students.  Overlaid  on the scatterplot are four smooth curves displaying the  relationship between these variables based on reported gender identity (identified as male, female, other).  Different gender identities are plotted in  different colors and shapes for the points and different colors for the  prediction lines." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness of college students.  Overlaid  on the scatterplot are four smooth curves displaying the  relationship between these variables based on reported gender identity (identified as male, female, other).  Different gender identities are plotted in  different colors and shapes for the points and different colors for the  prediction lines." width="576"></p>
 </figure>
 </div>
 </div>
@@ -522,7 +542,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that the legend is automatically updated to reflect the different shapes of the points as well.</p>
 <p>And finally, we can improve the labels of our plot using the <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function in a new layer. Some of the arguments to <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> might be self explanatory: <code>title</code> adds a title and <code>subtitle</code> adds a subtitle to the plot. Other arguments match the aesthetic mappings, <code>x</code> is the x-axis label, <code>y</code> is the y-axis label, and <code>color</code> and <code>shape</code> define the label for the legend. In addition, we can improve the color palette with the <code><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer()</a></code> function, asking it for colors that are “div” for <em>divergent</em>, or different from one another.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MindfulnessScale</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, color <span class="op">=</span> <span class="va">sex</span>, shape <span class="op">=</span> <span class="va">sex</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -539,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"div"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in college students, with lines of best fit displaying the relationship between these two variables  overlaid broken down by gender identity." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" alt="A scatterplot of mindfullness and happiness in college students, with lines of best fit displaying the relationship between these two variables  overlaid broken down by gender identity." width="576"></p>
 </figure>
 </div>
 </div>
@@ -555,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Why does the following give an error and how would you fix it?</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">eammi2</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">eammi2</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </li>
@@ -565,7 +585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" alt="A scatterplot of body mass vs. flipper length of penguins, colored  by bill depth. A smooth curve of the relationship between body mass  and flipper length is overlaid. The relationship is positive,  fairly linear, and moderately strong." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" alt="A scatterplot of body mass vs. flipper length of penguins, colored  by bill depth. A smooth curve of the relationship between body mass  and flipper length is overlaid. The relationship is positive,  fairly linear, and moderately strong." width="576"></p>
 </figure>
 </div>
 </div>
@@ -574,7 +594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, color <span class="op">=</span> <span class="va">AnyDisability</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -586,7 +606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.2</span> ggplot2 calls</h2>
 <p>As we move on from these introductory sections, we’ll transition to a more concise expression of ggplot2 code. So far we’ve been very explicit, which is helpful when you are learning:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, y <span class="op">=</span> <span class="va">SWBscale</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
@@ -594,7 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Often, R coders will omit the names of the arguments, relying on the fact that data is always the first argument and mapping is always second. This saves time in typing, but it makes the code harder to read and it is also a bit dangerous – it’s better to tell R exactly what you mean! So, this previous plot could be written like this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, y <span class="op">=</span> <span class="va">SWBscale</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, y <span class="op">=</span> <span class="va">SWBscale</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Some people feel that’s simpler and better, but I try to avoid short-cuts in my code.</p>
@@ -605,11 +625,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.3.1</span> A categorical variable</h3>
 <p>A variable is <strong>categorical</strong> if it can only take one of a small set of values. To examine the distribution of a categorical variable, you can use a bar chart. The height of the bars displays how many observations occurred with each <code>x</code> value.</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" alt="A bar chart of frequencies of racial identification" width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" alt="A bar chart of frequencies of racial identification" width="576"></p>
 </figure>
 </div>
 </div>
@@ -619,40 +639,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A variable is <strong>numerical</strong> (or quantitative) if it can take on a wide range of numerical values, and it is sensible to add, subtract, or take averages with those values. Numerical variables can be continuous or discrete.</p>
 <p>One commonly used visualization for distributions of continuous variables is a histogram.</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" alt="A histogram of ages of EAMMI2 participants.  The distribution is unimodal  and heavily right skewed." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" alt="A histogram of ages of EAMMI2 participants.  The distribution is unimodal  and heavily right skewed." width="576"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>A histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin. In the graph above, the tallest bar shows that over 800 participants had an <code>age</code> of 19.</p>
 <p>You can set the width of the intervals in a histogram with the binwidth argument, which is measured in the units of the <code>x</code> variable. You should always explore a variety of binwidths when working with histograms, as different binwidths can reveal different patterns.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" alt="Two histograms of age of eami2 participants, one with binwidth of 10  (left) and one with binwidth of 1 (right)." width="288"></p>
+<p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" alt="Two histograms of age of eami2 participants, one with binwidth of 10  (left) and one with binwidth of 1 (right)." width="288"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-20-2.png" class="img-fluid" alt="Two histograms of age of eami2 participants, one with binwidth of 10  (left) and one with binwidth of 1 (right)." width="288"></p>
+<p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" alt="Two histograms of age of eami2 participants, one with binwidth of 10  (left) and one with binwidth of 1 (right)." width="288"></p>
 </div>
 </div>
 </div>
 <p>An alternative visualization for distributions of numerical variables is a density plot. A density plot is a smoothed-out version of a histogram and a practical alternative, particularly for continuous data that comes from an underlying smooth distribution. We won’t go into how <code><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density()</a></code> estimates the density (you can read more about that in the function documentation), but let’s explain how the density curve is drawn with an analogy. Imagine a histogram made out of wooden blocks. Then, imagine that you drop a cooked spaghetti string over it. The shape the spaghetti will take draped over blocks can be thought of as the shape of the density curve. It shows fewer details than a histogram but can make it easier to quickly glean the shape of the distribution, particularly with respect to modes and skewness.</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: Removed 1007 rows containing non-finite outside the scale range</span></span>
 <span><span class="co">#&gt; (`stat_density()`).</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" alt="A density plot of ages of eammi2 participants." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" alt="A density plot of ages of eammi2 participants." width="576"></p>
 </figure>
 </div>
 </div>
@@ -663,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>How are the following two plots different? Which aesthetic, <code>color</code> or <code>fill</code>, is more useful for changing the color of bars?</p>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -696,22 +716,22 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 </div>
 <p>Let’s take a look at the distribution of happiness by race using <code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" alt="Side-by-side box plots of distributions of self-reported stress levesl by gender identity." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" alt="Side-by-side box plots of distributions of self-reported stress levesl by gender identity." width="576"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Alternatively, we can make density plots with <code><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" alt="A density plot of stress levels of penguins with gender identity represented  with different colored outlines for the density curves." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" alt="A density plot of stress levels of penguins with gender identity represented  with different colored outlines for the density curves." width="576"></p>
 </figure>
 </div>
 </div>
@@ -719,11 +739,11 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <p>We’ve also customized the thickness of the lines using the <code>linewidth</code> argument in order to make them stand out a bit more against the background.</p>
 <p>Additionally, we can map <code>species</code> to both <code>color</code> and <code>fill</code> aesthetics and use the <code>alpha</code> aesthetic to add transparency to the filled density curves. This aesthetic takes values between 0 (completely transparent) and 1 (completely opaque). In the following plot it’s <em>set</em> to 0.5.</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, color <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Stress</span>, color <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" alt="A density plot of stress levels by gender identity where  gender identity is represented in different  colored outlines for the density curves. The density curves are also  filled with the same colors, with some transparency added." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" alt="A density plot of stress levels by gender identity where  gender identity is represented in different  colored outlines for the density curves. The density curves are also  filled with the same colors, with some transparency added." width="576"></p>
 </figure>
 </div>
 </div>
@@ -737,22 +757,22 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <p>We can use stacked bar plots to visualize the relationship between two categorical variables. For example, the following two stacked bar plots both display the relationship between <code>sex</code> and <code>AnyDisibility</code>, or specifically, visualizing the distribution of <code>AnyDisibility</code> within each gender identity.</p>
 <p>The first plot shows the frequencies of each species of penguins on each island. The plot of frequencies shows that there are equal numbers of Adelies on each island. But we don’t have a good sense of the percentage balance within each island.</p>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">AnyDisability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">AnyDisability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" alt="Bar plots of AnyDisibility by Gender Identity" width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" alt="Bar plots of AnyDisibility by Gender Identity" width="576"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The second plot, a relative frequency plot created by setting <code>position = "fill"</code> in the geom, is more useful for comparing disability status across gender identities since it’s not affected by the unequal numbers of participants of different genders.</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">AnyDisability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">AnyDisability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" alt="Bar plots of penguin species by island (Biscoe, Dream, and Torgersen) the bars are scaled to the same height, making it a relative frequencies  plot" width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" alt="Bar plots of penguin species by island (Biscoe, Dream, and Torgersen) the bars are scaled to the same height, making it a relative frequencies  plot" width="576"></p>
 </figure>
 </div>
 </div>
@@ -762,11 +782,11 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <span class="header-section-number">3.4.3</span> Two numerical variables</h3>
 <p>So far you’ve learned about scatterplots (created with <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>) and smooth curves (created with <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth()</a></code>) for visualizing the relationship between two numerical variables. A scatterplot is probably the most commonly used plot for visualizing the relationship between two numerical variables.</p>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span>, y <span class="op">=</span> <span class="va">BelongingScale</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span>, y <span class="op">=</span> <span class="va">BelongingScale</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" alt="A scatterplot of body mass vs. flipper length of penguins. The plot  displays a positive, linear, relatively strong relationship between  these two variables." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" alt="A scatterplot of body mass vs. flipper length of penguins. The plot  displays a positive, linear, relatively strong relationship between  these two variables." width="576"></p>
 </figure>
 </div>
 </div>
@@ -775,11 +795,11 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <span class="header-section-number">3.4.4</span> Three or more variables</h3>
 <p>As we saw in <a href="#sec-adding-aesthetics-layers" class="quarto-xref"><span>Section 3.1.4</span></a>, we can incorporate more variables into a plot by mapping them to additional aesthetics.</p>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span>, shape <span class="op">=</span> <span class="va">RaceCoded</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" alt="The plot is very busy and it's difficult to distinguish the shapes of the points." width="576"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" alt="The plot is very busy and it's difficult to distinguish the shapes of the points." width="576"></p>
 </figure>
 </div>
 </div>
@@ -787,17 +807,17 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <p>However adding too many aesthetic mappings to a plot makes it cluttered and difficult to make sense of. Another way, which is particularly useful for categorical variables, is to split your plot into <strong>facets</strong>, subplots that each display one subset of the data.</p>
 <p>To facet your plot by a single variable, use <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code>. The first argument of <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> is a formula<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, which you create with <code>~</code> followed by a variable name. The variable that you pass to <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> should be categorical.</p>
 <div class="cell">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span>, shape <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">RaceCoded</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" alt="A scatterplot of stress and happiness by identified gender and race." width="768"></p>
+<figure class="figure"><p><img src="day_1_first_graph_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" alt="A scatterplot of stress and happiness by identified gender and race." width="768"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>You will learn about many other geoms for visualizing distributions of variables and relationships between them in <span class="quarto-unresolved-ref">?sec-layers</span>.</p>
+<p>You will learn about many other geoms for visualizing distributions of variables and relationships between them in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 </section><section id="exercises-2" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="exercises-2">
 <span class="header-section-number">3.4.5</span> Exercises</h3>
 <ol type="1">
@@ -809,7 +829,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <li>
 <p>Why does the following yield two separate legends? How would you fix it to combine the two legends?</p>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">Stress</span>, y <span class="op">=</span> <span class="va">SWBscale</span>, </span>
@@ -823,7 +843,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <li>
 <p>Create the two following stacked bar plots. Which question can you answer with the first one? Which question can you answer with the second one?</p>
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">marriage5</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sex</span>, fill <span class="op">=</span> <span class="va">marriage5</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">marriage5</span>, fill <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -833,21 +853,21 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <span class="header-section-number">3.5</span> Saving your plots</h2>
 <p>Once you’ve made a plot, you might want to get it out of R by saving it as an image that you can use elsewhere. That’s the job of <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code>, which will save the plot most recently created to disk:</p>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">eammi2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">SWBscale</span>, y <span class="op">=</span> <span class="va">Stress</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span>, shape <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">RaceCoded</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>filename <span class="op">=</span> <span class="st">"stress_happiness_by_sex_and_race.png"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will save your plot to your working directory, a concept you’ll learn more about in <span class="quarto-unresolved-ref">?sec-workflow-scripts-projects</span>.</p>
+<p>This will save your plot to your working directory, a concept you’ll learn more about in <a href="day_1_scripts.html" class="quarto-xref"><span>Chapter 6</span></a></p>
 <p>If you don’t specify the <code>width</code> and <code>height</code> they will be taken from the dimensions of the current plotting device. For reproducible code, you’ll want to specify them. You can learn more about <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code> in the documentation.</p>
-<p>Generally, however, we recommend that you assemble your final reports using Quarto, a reproducible authoring system that allows you to interleave your code and your prose and automatically include your plots in your write-ups. You will learn more about Quarto in <span class="quarto-unresolved-ref">?sec-quarto</span>.</p>
+<p>Generally, however, we recommend that you assemble your final reports using Quarto, a reproducible authoring system that allows you to interleave your code and your prose and automatically include your plots in your write-ups. You will learn more about Quarto in <span class="quarto-unresolved-ref">?sec-day-3-overview</span> .</p>
 <section id="exercises-3" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="exercises-3">
 <span class="header-section-number">3.5.1</span> Exercises</h3>
 <ol type="1">
 <li>
 <p>Run the following lines of code. Which of the two plots is saved as <code>mpg-plot.png</code>? Why?</p>
 <div class="cell">
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">cty</span>, y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -861,7 +881,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 <p>Start by carefully comparing the code that you’re running to the code in the book. R is extremely picky, and a misplaced character can make all the difference. Make sure that every <code>(</code> is matched with a <code>)</code> and every <code>"</code> is paired with another <code>"</code>. Sometimes you’ll run the code and nothing happens. Check the left-hand of your console: if it’s a <code>+</code>, it means that R doesn’t think you’ve typed a complete expression and it’s waiting for you to finish it. In this case, it’s usually easy to start from scratch again by pressing ESCAPE to abort processing the current command.</p>
 <p>One common problem when creating ggplot2 graphics is to put the <code>+</code> in the wrong place: it has to come at the end of the line, not the start. In other words, make sure you haven’t accidentally written code like this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> </span>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> </span>
 <span><span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you’re still stuck, try the help. You can get help about any R function by running <code>?function_name</code> in the console, or highlighting the function name and pressing F1 in RStudio. Don’t worry if the help doesn’t seem that helpful - instead skip down to the examples and look for code that matches what you’re trying to do.</p>
@@ -869,7 +889,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 </section><section id="summary" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="summary">
 <span class="header-section-number">3.7</span> Summary</h2>
 <p>In this chapter, you’ve learned the basics of data visualization with ggplot2. We started with the basic idea that underpins ggplot2: a visualization is a mapping from variables in your data to aesthetic properties like position, color, size and shape. You then learned about increasing the complexity and improving the presentation of your plots layer-by-layer. You also learned about commonly used plots for visualizing the distribution of a single variable as well as for visualizing relationships between two or more variables, by leveraging additional aesthetic mappings and/or splitting your plot into small multiples using faceting.</p>
-<p>We’ll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in <span class="quarto-unresolved-ref">?sec-layers</span> through <span class="quarto-unresolved-ref">?sec-communication</span>.</p>
+<p>We’ll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a> through <a href="day_2_communication.html" class="quarto-xref"><span>Chapter 11</span></a>.</p>
 <p>With the basics of visualization under your belt, in the next chapter we’re going to switch gears a little and give you some practical workflow advice. We intersperse workflow advice with data science tools throughout this part of the book because it’ll help you stay organized as you write increasing amounts of R code.</p>
 
 

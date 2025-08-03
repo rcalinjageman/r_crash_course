@@ -29,6 +29,9 @@ book:
         - day_1_whole_game.qmd
         - day_1_first_graph.qmd
         - day_1_r_basics.qmd
+        - day_1_style.qmd
+        - day_1_scripts.qmd
+        - day_1_help.qmd
         - day_1_assignments.qmd
     - part: day_2.qmd
       chapters: 

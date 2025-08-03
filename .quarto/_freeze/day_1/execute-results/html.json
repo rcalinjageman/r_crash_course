@@ -1,8 +1,8 @@
 {
-  "hash": "68c2dfd47a526d10c5b7578e8c1b8d5c",
+  "hash": "ad5fb93e51bbe5a959b0f92ae3327545",
   "result": {
     "engine": "knitr",
-    "markdown": "# Day 1 {#sec-day-1-overview .unnumbered}\n\n\n\n\n\n\n\n\n\n\nIt's day 1! Excitement is high. Here's the plan for today:\n\n-   Get to know each other\n\n-   Why learn R and data science?\n\n-   Jump in - first graph\n\n-   Coding basics\n\n-   Assignments\n\nWe're assuming that everyone has created their Posit.Cloud account and their Github Account. If not, please check out the instructions on the @sec-getting-started page.\n\n# \n",
+    "markdown": "# Day 1 {#sec-day-1-overview .unnumbered}\n\n\n\n\n\n\n\n\n\nIt's day 1! Excitement is high. Here's the plan for today:\n\n-   Course Business: @sec-day-1-intro\n\n    -   Get to know each other\n\n    -   Course organization and rules\n\n    -   Why learn R and data science?\n\n-   Jump in\n\n    -   @sec-day-1-whole-game\n\n    -   @sec-day-1-first-graph\n\n-   Coding basics\n\n    -   @sec-day-1-r-basics\n\n    -   @sec-day-1-style\n\n    -   @sec-day-1-scripts\n\n    -   @sec-day-help\n\n-   Assignments\n\nWe're assuming that everyone has created their Posit.Cloud account and their Github Account. If not, please check out the instructions on the getting started page .\n\n# \n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
