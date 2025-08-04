@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./day_2_exploring.html" rel="next">
-<link href="./day_2_data_tidy.html" rel="prev">
+<link href="./day_2_transformation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -216,8 +216,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./day_2_data_tidy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data tidying</span></span></a>
+  <a href="./day_2_transformation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data transformation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -383,14 +383,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This chapter focuses on ggplot2. To access the datasets, help pages, and functions used in this chapter, load the tidyverse by running this code:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>    <span class="co"># This loads ggplot2 and a bunch of related packages</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyverse' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'ggplot2' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tibble' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyr' was built under R version 4.4.2</span></span>
-<span><span class="co">#&gt; Warning: package 'readr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'purrr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'forcats' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'lubridate' was built under R version 4.4.3</span></span>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>      <span class="co"># This loads ggplot2 only</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -497,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-shapes" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Mapping between shapes and the numbers that represent them: 0 - square open,  1 - circle open, 2 - triangle open, 3 - plus, 4 - cross, 5 - diamond open,  6 - triangle down open, 7 - square cross, 8 - asterisk, 9 - diamond plus,  10 - circle plus, 11 - star, 12 - square plus,  13 - circle cross, 14 - square triangle, 15 - square,  16 - circle small, 17 - triangle, 18 - diamond,  19 - circle, 20 - bullet, 21 - circle filled,  22 - square filled, 23 - diamond filled, 24 - triangle filled,  25 - triangle down filled.">
+<div id="fig-shapes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Mapping between shapes and the numbers that represent them: 0 - square open,  1 - circle open, 2 - triangle open, 3 - plus, 4 - cross, 5 - diamond open,  6 - triangle down open, 7 - square cross, 8 - asterisk, 9 - diamond plus,  10 - circle plus, 11 - star, 12 - square plus,  13 - circle cross, 14 - square triangle, 15 - square,  16 - circle small, 17 - triangle, 18 - diamond,  19 - circle, 20 - bullet, 21 - circle filled,  22 - square filled, 23 - diamond filled, 24 - triangle filled,  25 - triangle down filled." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-shapes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="day_2_layers_files/figure-html/fig-shapes-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Mapping between shapes and the numbers that represent them: 0 - square open,  1 - circle open, 2 - triangle open, 3 - plus, 4 - cross, 5 - diamond open,  6 - triangle down open, 7 - square cross, 8 - asterisk, 9 - diamond plus,  10 - circle plus, 11 - star, 12 - square plus,  13 - circle cross, 14 - square triangle, 15 - square,  16 - circle small, 17 - triangle, 18 - diamond,  19 - circle, 20 - bullet, 21 - circle filled,  22 - square filled, 23 - diamond filled, 24 - triangle filled,  25 - triangle down filled." width="576">
 </div>
@@ -665,7 +657,6 @@ Figure&nbsp;10.1: R has 26 built-in shapes that are identified by numbers. There
 <p>ggplot2 provides more than 40 geoms but these don’t cover all possible plots one could make. If you need a different geom, we recommend looking into extension packages first to see if someone else has already implemented it (see <a href="https://exts.ggplot2.tidyverse.org/gallery/" class="uri">https://exts.ggplot2.tidyverse.org/gallery/</a> for a sampling). For example, the <strong>ggridges</strong> package (<a href="https://wilkelab.org/ggridges/" class="uri">https://wilkelab.org/ggridges</a>) is useful for making ridgeline plots, which can be useful for visualizing the density of a numerical variable for different levels of a categorical variable. In the following plot not only did we use a new geom (<code><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges()</a></code>), but we have also mapped the same variable to multiple aesthetics (<code>drv</code> to <code>y</code>, <code>fill</code>, and <code>color</code>) as well as set an aesthetic (<code>alpha = 0.5</code>) to make the density curves transparent.</p>
 <div class="cell">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'ggridges' was built under R version 4.4.3</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">hwy</span>, y <span class="op">=</span> <span class="va">drv</span>, fill <span class="op">=</span> <span class="va">drv</span>, color <span class="op">=</span> <span class="va">drv</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -1551,8 +1542,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./day_2_data_tidy.html" class="pagination-link" aria-label="Data tidying">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data tidying</span></span>
+      <a href="./day_2_transformation.html" class="pagination-link" aria-label="Data transformation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data transformation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

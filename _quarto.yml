@@ -35,7 +35,7 @@ book:
         - day_1_assignments.qmd
     - part: day_2.qmd
       chapters:
-        - day_2_data_tidy.qmd
+        - day_2_transformation.qmd
         - day_2_layers.qmd
         - day_2_exploring.qmd
         - day_2_communication.qmd
