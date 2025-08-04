@@ -34,13 +34,16 @@ book:
         - day_1_help.qmd
         - day_1_assignments.qmd
     - part: day_2.qmd
-      chapters: 
+      chapters:
+        - day_2_data_tidy.qmd
         - day_2_layers.qmd
         - day_2_exploring.qmd
         - day_2_communication.qmd
     - part: day_3.qmd
       chapters: 
-        - day_3_more.qmd
+        - day_3_website.qmd
+        - day_3_quarto.qmd
+        - day_3_project.qmd
     - part: day_4.qmd
       chapters:
         - day_4_more.qmd

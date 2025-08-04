@@ -67,5 +67,17 @@
   },
   "day_1_help.qmd": {
     "day_1_help.html": "8398379e"
+  },
+  "day_3_website.qmd": {
+    "day_3_website.html": "7ced603a"
+  },
+  "day_3_quarto.qmd": {
+    "day_3_quarto.html": "98e07871"
+  },
+  "day_3_project.qmd": {
+    "day_3_project.html": "edd88300"
+  },
+  "day_2_data_tidy.qmd": {
+    "day_2_data_tidy.html": "01afb826"
   }
 }

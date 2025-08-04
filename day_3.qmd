@@ -1,3 +1,9 @@
 # Day 3 {#sec-day-3-overview .unnumbered}
 
-Day 3 we will...
+Day 3 is when we dig into projects!
+
+-   You'll setup a GitHub-hosted website where you can post your project for the world to see
+
+-   We'll discuss Quarto, a system for creating beautiful reports for R projects
+
+-   You'll figure out what dataset and question will be the focus of your project

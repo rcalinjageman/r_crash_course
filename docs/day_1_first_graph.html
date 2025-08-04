@@ -216,20 +216,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./day_2_data_tidy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data tidying</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./day_2_layers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_2_exploring.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_2_communication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Layers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Communication</span></span></a>
   </div>
 </li>
       </ul>
@@ -245,8 +251,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./day_3_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Day 3</span></span></a>
+  <a href="./day_3_website.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Website</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day_3_quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day_3_project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Your Project</span></span></a>
   </div>
 </li>
       </ul>
@@ -263,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_4_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Day 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Day 4</span></span></a>
   </div>
 </li>
       </ul>
@@ -280,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day_5_more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Day 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Day 5</span></span></a>
   </div>
 </li>
       </ul>
@@ -467,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Our empty canvas now has more structure – it’s clear where mindfulness scores will be displayed (on the x-axis) and where happiness will be displayed (on the y-axis). But the students themselves are not yet on the plot. This is because we have not yet articulated, in our code, how to represent the observations from our data frame on our plot.</p>
 <p>To do so, we need to define a <strong>geom</strong>: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with <code>geom_</code>. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code>), line charts use line geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code>), boxplots use boxplot geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code>), scatterplots use point geoms (<code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>), and so on.</p>
-<p>The function <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You’ll learn a whole bunch of geoms throughout the book, particularly in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
+<p>The function <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> adds a layer of points to your plot, which creates a scatterplot. ggplot2 comes with many geom functions that each adds a different type of layer to a plot. You’ll learn a whole bunch of geoms throughout the book, particularly in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 10</span></a>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">eammi2</span>,</span>
@@ -817,7 +835,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 </div>
 </div>
 </div>
-<p>You will learn about many other geoms for visualizing distributions of variables and relationships between them in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
+<p>You will learn about many other geoms for visualizing distributions of variables and relationships between them in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 10</span></a>.</p>
 </section><section id="exercises-2" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="exercises-2">
 <span class="header-section-number">3.4.5</span> Exercises</h3>
 <ol type="1">
@@ -889,7 +907,7 @@ Figure&nbsp;3.1: Diagram depicting how a boxplot is created.
 </section><section id="summary" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="summary">
 <span class="header-section-number">3.7</span> Summary</h2>
 <p>In this chapter, you’ve learned the basics of data visualization with ggplot2. We started with the basic idea that underpins ggplot2: a visualization is a mapping from variables in your data to aesthetic properties like position, color, size and shape. You then learned about increasing the complexity and improving the presentation of your plots layer-by-layer. You also learned about commonly used plots for visualizing the distribution of a single variable as well as for visualizing relationships between two or more variables, by leveraging additional aesthetic mappings and/or splitting your plot into small multiples using faceting.</p>
-<p>We’ll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 9</span></a> through <a href="day_2_communication.html" class="quarto-xref"><span>Chapter 11</span></a>.</p>
+<p>We’ll use visualizations again and again throughout this class, introducing new techniques as we need them as well as do a deeper dive into creating visualizations with ggplot2 in <a href="day_2_layers.html" class="quarto-xref"><span>Chapter 10</span></a> through <a href="day_2_communication.html" class="quarto-xref"><span>Chapter 12</span></a>.</p>
 <p>With the basics of visualization under your belt, in the next chapter we’re going to switch gears a little and give you some practical workflow advice. We intersperse workflow advice with data science tools throughout this part of the book because it’ll help you stay organized as you write increasing amounts of R code.</p>
 
 
