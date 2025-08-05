@@ -39,6 +39,7 @@ book:
         - day_2_layers.qmd
         - day_2_exploring.qmd
         - day_2_communication.qmd
+        - day_2_assignments.qmd
     - part: day_3.qmd
       chapters: 
         - day_3_website.qmd

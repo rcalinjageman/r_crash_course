@@ -1,0 +1,206 @@
+# D2 Assignment {#sec-day-1-assignments}
+
+```{r}
+#| echo: false
+source("_common.R")
+library(ggplot2)
+library(tidyverse)
+eammi2 <- read.csv("data/EAMMi2-CleanData.csv")
+college_survey <- read.csv("data/college_survey.csv")
+```
+
+For this assignment, create a new R script (day_2_assignment.R would be a good name).
+
+Use comments and code to work through this assignment. (e.g. make a comment like #Question 1 and then write/perfect code and comments to respond to the question 1 prompts).
+
+At the outset, you'll need to load ggplot2 and dplyr. You can load both with:
+
+``` R
+library(tidyverse)
+```
+
+These questions use the college_survey data set. This is a survey of Dominican University students.
+
+Load this data with:
+
+``` R
+college_survey <- read.csv("college_survey.csv")
+```
+
+Here are the variables contained in the dataset:
+
+ID
+
+:   integer
+
+Gender
+
+:   factor: Male / Female
+
+Gender_Code
+
+:   factor: 1 for Female, 2 for Male
+
+Age
+
+:   integer
+
+Shool_Year
+
+:   factor
+
+School_Year_Code
+
+:   factor
+
+Transfer
+
+:   factor: Yes / No
+
+Transfer_Code
+
+:   logical: True / False
+
+Student_Athlete
+
+:   factor: non-athlete, In-season, Out of season
+
+Student_Athlete_Code
+
+:   logical: True / False
+
+Wealth_SR
+
+:   numeric: perceived wealth relative to other DU students, scale of 1-5
+
+GPA
+
+:   numeric
+
+ACT
+
+:   integer
+
+Subjective_Well_Being - Happiness
+
+:   numeric, 1-5
+
+Positive_Affect (Good feelings)
+
+:   numeric, 1-5
+
+Negative_Affect
+
+:   numeric
+
+Relationship_Confidence
+
+:   numeric
+
+Exercise
+
+:   numeric
+
+Academic_Motivation_Intrinsic
+
+:   numeric
+
+Academic_Motivation_Extrinsic
+
+:   numeric
+
+Academic_Motivation_Amotivation
+
+:   numeric
+
+Intelligence_Value
+
+:   numeric
+
+Raven_Score
+
+:   numeric
+
+    1.  Do ACT scores really predict how you'll do in college? Let's examine the relationship between ACT and GPA.
+
+        What type of graph would work best for this?\
+        \
+        Make an initial graph.\
+        \
+        Looks like there are lots of dots on top of each other; try position = "jitter" to spread things out a bit.\
+        \
+        Add a fit line with geom_smooth\
+        \
+        Notice the extreme impact of an outlier who claims to have a GPA of less than 1. That doesn't seem totally credible. Use the filter function from dplyr to make the same plot but only with participants who have GPAs \> 1. \
+        \
+        CHALLENGE: Notice the person who says they had a 36 ACT? That's a perfect score. WOW! Can you highlight this one point on the graph? See section 10.3 of Layers for an example. \
+        \
+        Set the dots to be a nicer color, size, and shape ("square filled" is a good shape; see Layers for all the shapes; you can specify them by their name or their number). Apply these globally; not through mapping a variable. Make your line of best fit match.\
+        \
+        Add nice x and y labels and a title\
+        \
+        Save your graph as a png file\
+        \
+        What is your conclusion? Make a conclusion that is a short,
+
+    2.  Do you need a good GPA to be happy? Does it matter if you are a student athlete, where low grades could keep you out of your sport?\
+        \
+        Make a graph of the relationship between GPA and Subjective_Well_Being, a measure of happiness (1-7)\
+        \
+        We have two variables about athlete status: Student_Athlete and Student_Athlete_Code. Try breaking down the relationship by either variable. Try doing this using a mapping that gives different colors and shapes by athlete status, and also try with faceting. Which variable and break-down technique works better?\
+        \
+        Finish off your graph with nice labels. Save it as a PNG.\
+        \
+        Write a conclusion.\
+
+    3.  Some sorting questions:\
+        \
+        How many students rate themselves at the lowest level of wealth (a 1)? (the wealth variable is Wealth_SR, meaning Wealth Self-Reported)\
+        \
+        How many students rate themselves at the highest level of wealth (a 5)?\
+        \
+        Sort by wealth and descending happiness. What is the highest level of happiness among students with a 1 for wealth? What is the highest level of happiness among students with a 5 for wealth? (re-sorting might help with this 2nd part)
+
+    4.  Compare the distributions of GPA among athletes and non-athletes using density ridges (you'll need to load the ggridges library). For a density ridge the numerical variable you want to plot goes on the x axis, the category/type variable goes on the y axis *and* is mapped to color and fill. Let's use Student_Athlete_Code as our categorical variable, as it just gives a simple TRUE/FALSE for if the student is an athlete.\
+        \
+        Work on improving the plot. First, can we get rid of the NA? filter can help. The function is.na tells if a value is NA. !is.na(column_name) means *not* NA. See if you filter out the NAs.\
+        \
+        CHALLENGE: TRUE and FALSE is not super readable for an outside user. Can you use mutate and the case_when function to create a Student_Athlete_Better_Code variable that uses "Athlete" and "Non Athlete" as its labels? Here's an example of using mutate to recode a categorical variable... can you adapt it for your needs?
+
+        ``` R
+        mutate(
+            drive_type = case_when(
+              drv == "f" ~ "front-wheel drive",
+              drv == "r" ~ "rear-wheel drive",
+              drv == "4" ~ "4-wheel drive"
+            )
+          ) 
+        ```
+
+        Now add a good title and labels to your graph and save it as a PNG.\
+        \
+        Write a conclusion: Do athletes seem to differ in their distribution of grades compared to non-athletes?\
+        \
+        Think about how GPAs work. Do you see any problems with density ridges and how they present data?
+
+    5.  Repeat question 5 but using stat_summary to give the min, max, and median gpa for athletes and non-athletes. You'll probably want to switch GPA to the y axis and Student_Athlete_Code to the x axis. You won't need to map color or fill to athlete status. But you will \
+        \
+        Here's an example from class where we used stat_summary.
+
+        ``` R
+        ggplot(diamonds) + 
+          stat_summary(
+            aes(x = cut, y = depth),
+            fun.min = min,
+            fun.max = max,
+            fun = median
+          )
+        ```
+
+        You'll still want to filter out NA for student athletes.\
+        \
+        Challenge: Make an addition graph using the Student_Athlete variable that notes if the athlete is in-season or out of season.
+
+    6.   Come up with your own question for this data set. This question should be about the relationship between 2 quantititative variables, and you should break the relationship down by a categorical variable using either a mapping of facets. Pretty up your graph and write a conclusion.
+
+    7.  Come up with another question for this data set. This one should compare groups from a categorical variable on a quantitative variable (e.g. is happiness different for athletes vs. non-athletes?). You might need to do some filtering or re-coding.\

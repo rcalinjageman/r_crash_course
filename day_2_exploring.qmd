@@ -491,7 +491,7 @@ ggplot(smaller, aes(x = carat, y = price)) +
       geom_boxplot(aes(group = cut_number(carat, 20)))
     ```
 
-## Patterns and models
+## Patterns and models (we'll skip this)
 
 If a systematic relationship exists between two variables it will appear as a pattern in the data. If you spot a pattern, ask yourself:
 
