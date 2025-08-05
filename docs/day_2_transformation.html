@@ -387,16 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this chapter, we’ll focus on the dplyr package, another core member of the tidyverse. We’ll illustrate the key ideas using data from the nycflights13 package and use ggplot2 to help us understand the data.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/hadley/nycflights13">nycflights13</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'nycflights13' was built under R version 4.4.3</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyverse' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'ggplot2' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tibble' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyr' was built under R version 4.4.2</span></span>
-<span><span class="co">#&gt; Warning: package 'readr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'purrr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'forcats' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'lubridate' was built under R version 4.4.3</span></span>
 <span><span class="co">#&gt; ── Attaching core tidyverse packages ───────────────────── tidyverse 2.0.0 ──</span></span>
 <span><span class="co">#&gt; ✔ dplyr     1.1.4     ✔ readr     2.1.5</span></span>
 <span><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.1</span></span>
@@ -831,7 +822,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">#&gt; # ℹ 336,770 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If you have a bunch of inconsistently named columns and it would be painful to fix them all by hand, check out <code>janitor::clean_names()</code> which provides some useful automated cleaning.</p>
+<p>If you have a bunch of inconsistently named columns and it would be painful to fix them all by hand, check out <code><a href="https://sfirke.github.io/janitor/reference/clean_names.html">janitor::clean_names()</a></code> which provides some useful automated cleaning.</p>
 </section><section id="relocate" class="level3" data-number="9.3.4"><h3 data-number="9.3.4" class="anchored" data-anchor-id="relocate">
 <span class="header-section-number">9.3.4</span> <code>relocate()</code>
 </h3>

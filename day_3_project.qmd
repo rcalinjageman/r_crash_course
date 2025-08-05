@@ -2,6 +2,46 @@
 
 For your project, you will ask and answer 1-2 questions from a dataset you are interested in.
 
+## DataSets?
+
+Some possible datasets you could explore:
+
+-   Databases of datasets:
+
+    -   <https://www.kaggle.com/datasets>
+
+    -   APA list: <https://www.apa.org/research-practice/conduct-research/data-links>
+
+    -   <https://datasetsearch.research.google.com/>
+
+    -   <https://data.world/>
+
+<!-- -->
+
+-   Financial/economic/global datasets:
+
+    -   <https://fred.stlouisfed.org/>
+
+    -   <https://data.worldbank.org/>
+
+-   US Government Data:
+
+    -   National Center for Educational Statistics: <https://nces.ed.gov/>
+
+    -   <https://data.gov/>
+
+-   Psychology/Neuroscience
+
+    -   <https://www.kaggle.com/discussions/general/304994>
+
+    -   <https://openpsychologydata.metajnl.com/>
+
+    -   A dataset of brain sizes amongst different species:
+
+-   Ecology:
+
+    -   <https://libguides.cmich.edu/lifesciencedata/ecological>
+
 ## Outline
 
 Your project will have the following outline:

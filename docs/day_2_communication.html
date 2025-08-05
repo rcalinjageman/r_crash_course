@@ -387,20 +387,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this chapter, we’ll focus once again on ggplot2. We’ll also use a little dplyr for data manipulation, <strong>scales</strong> to override the default breaks, labels, transformations and palettes, and a few ggplot2 extension packages, including <strong>ggrepel</strong> (<a href="https://ggrepel.slowkow.com/">https://ggrepel.slowkow.com</a>) by Kamil Slowikowski and <strong>patchwork</strong> (<a href="https://patchwork.data-imaginist.com/">https://patchwork.data-imaginist.com</a>) by Thomas Lin Pedersen. Don’t forget that you’ll need to install those packages with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> if you don’t already have them.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyverse' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'ggplot2' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tibble' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'tidyr' was built under R version 4.4.2</span></span>
-<span><span class="co">#&gt; Warning: package 'readr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'purrr' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'forcats' was built under R version 4.4.3</span></span>
-<span><span class="co">#&gt; Warning: package 'lubridate' was built under R version 4.4.3</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'scales' was built under R version 4.4.3</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggrepel.slowkow.com/">ggrepel</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'ggrepel' was built under R version 4.4.3</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: package 'patchwork' was built under R version 4.4.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="labels" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="labels">
 <span class="header-section-number">12.2</span> Labels</h2>
