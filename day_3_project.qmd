@@ -2,19 +2,23 @@
 
 For your project, you will ask and answer 1-2 questions from a dataset you are interested in.
 
+Here is the poster template for the mini expo: [Workshop Poster Template](https://github.com/rcalinjageman/r_crash_course/raw/refs/heads/main/poster_template.pptx)
+
 ## DataSets?
 
 Some possible datasets you could explore:
 
 -   Databases of datasets:
 
-    -   <https://www.kaggle.com/datasets>
+    -   Best source: <https://www.nature.com/sdata/>  - this is a database of scientific datasets, each vetted and peer reviewed
+
+    -   <https://openpsychologydata.metajnl.com/> - this is a journal in psychology devoted to open datasets
 
     -   APA list: <https://www.apa.org/research-practice/conduct-research/data-links>
 
     -   <https://datasetsearch.research.google.com/>
 
-    -   <https://data.world/>
+    -   <https://www.kaggle.com/datasets> - this is a decent resource, but be careful: some datasets are "synthetic" (fake); others are questionable or not well-documented.
 
 <!-- -->
 
@@ -34,7 +38,7 @@ Some possible datasets you could explore:
 
     -   <https://www.kaggle.com/discussions/general/304994>
 
-    -   <https://openpsychologydata.metajnl.com/>
+    -   
 
     -   A dataset of brain sizes amongst different species:
 

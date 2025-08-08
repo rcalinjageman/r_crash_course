@@ -1032,7 +1032,7 @@
     "href": "day_3_project.html",
     "title": "16  Your Project",
     "section": "",
-    "text": "16.1 DataSets?\nFor your project, you will ask and answer 1-2 questions from a dataset you are interested in.\nSome possible datasets you could explore:",
+    "text": "16.1 DataSets?\nFor your project, you will ask and answer 1-2 questions from a dataset you are interested in.\nHere is the poster template for the mini expo: Workshop Poster Template\nSome possible datasets you could explore:",
     "crumbs": [
       "Day 3",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Your Project</span>"
@@ -1043,7 +1043,7 @@
     "href": "day_3_project.html#datasets",
     "title": "16  Your Project",
     "section": "",
-    "text": "Databases of datasets:\n\nhttps://www.kaggle.com/datasets\nAPA list: https://www.apa.org/research-practice/conduct-research/data-links\nhttps://datasetsearch.research.google.com/\nhttps://data.world/\n\n\n\n\nFinancial/economic/global datasets:\n\nhttps://fred.stlouisfed.org/\nhttps://data.worldbank.org/\n\nUS Government Data:\n\nNational Center for Educational Statistics: https://nces.ed.gov/\nhttps://data.gov/\n\nPsychology/Neuroscience\n\nhttps://www.kaggle.com/discussions/general/304994\nhttps://openpsychologydata.metajnl.com/\nA dataset of brain sizes amongst different species:\n\nEcology:\n\nhttps://libguides.cmich.edu/lifesciencedata/ecological",
+    "text": "Databases of datasets:\n\nBest source: https://www.nature.com/sdata/ - this is a database of scientific datasets, each vetted and peer reviewed\nhttps://openpsychologydata.metajnl.com/ - this is a journal in psychology devoted to open datasets\nAPA list: https://www.apa.org/research-practice/conduct-research/data-links\nhttps://datasetsearch.research.google.com/\nhttps://www.kaggle.com/datasets - this is a decent resource, but be careful: some datasets are “synthetic” (fake); others are questionable or not well-documented.\n\n\n\n\nFinancial/economic/global datasets:\n\nhttps://fred.stlouisfed.org/\nhttps://data.worldbank.org/\n\nUS Government Data:\n\nNational Center for Educational Statistics: https://nces.ed.gov/\nhttps://data.gov/\n\nPsychology/Neuroscience\n\nhttps://www.kaggle.com/discussions/general/304994\n\nA dataset of brain sizes amongst different species:\n\nEcology:\n\nhttps://libguides.cmich.edu/lifesciencedata/ecological",
     "crumbs": [
       "Day 3",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Your Project</span>"
