@@ -36,49 +36,49 @@ In addition to tidyverse, we will also use the **eammi2** dataset. This is data 
 
 The eammi2 project was quite extensive, measuring many different variables, including:
 
--   *Happiness* - which psychologists call Subjective Well Being. Participants rated their happiness on 6 different items on a scale from 1-7. Each participant's happiness level is in SWBScale
+- *Happiness* - which psychologists call Subjective Well Being. Participants rated their happiness on 6 different items on a scale from 1-7. Each participant's happiness level is in SWBScale
 
--   *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items). Each participant's overall mindfullness scores is in MindfulnessScale
+- *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items). Each participant's overall mindfullness scores is in MindfulnessScale
 
--   *Social media use*: This was measured in a couple of ways, with overall intensity of use in SocialMediaSum
+- *Social media use*: This was measured in a couple of ways, with overall intensity of use in SocialMediaSum
 
--   *Markers of Adulthood* (MOA; items derived from \[[11](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B11)\], \[[12](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B12)\]; importance, 20 items; achieve, 20 items; adulthood, 1 item),
+- *Markers of Adulthood* (MOA; items derived from \[[11](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B11)\], \[[12](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B12)\]; importance, 20 items; achieve, 20 items; adulthood, 1 item),
 
--   *IDEA-8* \[[13](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B13)\] (8 items),
+- *IDEA-8* \[[13](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B13)\] (8 items),
 
--   *Political Affiliation* (party identification, 1 item; political ideology, 1 item;
+- *Political Affiliation* (party identification, 1 item; political ideology, 1 item;
 
--   *Presidential Preference, 1* item),
+- *Presidential Preference, 1* item),
 
--   *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items),
+- *Mindfulness* \[[15](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B15)\] (15 items),
 
--   *Need to Belong* \[[16](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B16)\] (10 items),
+- *Need to Belong* \[[16](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B16)\] (10 items),
 
--   *Efficacy* \[[17](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B17)\] (8 items),
+- *Efficacy* \[[17](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B17)\] (8 items),
 
--   *Perceived Social Support* \[[18](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B18)\] (12 items),
+- *Perceived Social Support* \[[18](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B18)\] (12 items),
 
--   *Social Media Use Scale* (adapted from \[[19](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B19)\], \[[20](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B20)\], maintaining existing connections, 5 items; making new connections, 4 items; information, 2 items),
+- *Social Media Use Scale* (adapted from \[[19](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B19)\], \[[20](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B20)\], maintaining existing connections, 5 items; making new connections, 4 items; information, 2 items),
 
--   *American Dream* (importance of achieving, 1 item; ability to achieve; 1 item),
+- *American Dream* (importance of achieving, 1 item; ability to achieve; 1 item),
 
--   *Interpersonal Transgressions* (exploratory items adapted from \[[21](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B21)\], 12 items),
+- *Interpersonal Transgressions* (exploratory items adapted from \[[21](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B21)\], 12 items),
 
--   *Narcissistic Personality Inventory-13* (NPI-13; \[[22](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B22)\], 13 items),
+- *Narcissistic Personality Inventory-13* (NPI-13; \[[22](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B22)\], 13 items),
 
--   *Interpersonal Exploitativeness Scale* \[[23](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B23)\], (3 items),
+- *Interpersonal Exploitativeness Scale* \[[23](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B23)\], (3 items),
 
--   *Disability Identity* (one dichotomous item assessing participants’ self-perception as “disabled” and six dichotomous items assessing the presence or absence of a disability in a variety of areas; including physical, sensory, learning, psychiatric, chronic health, and other;
+- *Disability Identity* (one dichotomous item assessing participants’ self-perception as “disabled” and six dichotomous items assessing the presence or absence of a disability in a variety of areas; including physical, sensory, learning, psychiatric, chronic health, and other;
 
--   *Personal Opinions Questionnaire*, POQ; \[[24](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B24)\], 15 items),
+- *Personal Opinions Questionnaire*, POQ; \[[24](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B24)\], 15 items),
 
--   *Patient Health Questionnaire* \[[25](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B25)\], (13 items),
+- *Patient Health Questionnaire* \[[25](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B25)\], (13 items),
 
--   *Perceived Stress Questionnaire* \[[26](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B26)\], (10 items),
+- *Perceived Stress Questionnaire* \[[26](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B26)\], (10 items),
 
--   *Marriage Opinions* (Central identity, Marital Salience, Marital Timing, Marital Permanence, adapted from \[[27](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B27)\], \[[28](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B28)\] (5 items),
+- *Marriage Opinions* (Central identity, Marital Salience, Marital Timing, Marital Permanence, adapted from \[[27](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B27)\], \[[28](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.38#B28)\] (5 items),
 
--   demographics (school attended, sex, age, education, sibling, race, armed services (2 items), income, and Residency (3 items).
+- demographics (school attended, sex, age, education, sibling, race, armed services (2 items), income, and Residency (3 items).
 
 We are going to obtain the eammi2 data set using the download.file command in R. We will then read into memory using the read.csv command, calling it eammi2.
 
@@ -98,17 +98,17 @@ Does being mindful correlate with being a happier person? Does lots of social me
 
 ### The `eammi2` data frame
 
-You can test your answers to those questions with the `eammi2` **data frame** that we have downloaded and loaded. A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). `eammi2` contains `r nrow(eammi2)` observations collected and made available by Grahe et al. (2018).
+You can estimate answers to those questions with the `eammi2` **data frame** that we have downloaded and loaded. A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). `eammi2` contains `r nrow(eammi2)` observations collected and made available by Grahe et al. (2018).
 
 To make the discussion easier, let's define some terms:
 
--   A **variable** is a quantity, quality, or property that you can measure.
+- A **variable** is a quantity, quality, or property that you can measure.
 
--   A **value** is the state of a variable when you measure it. The value of a variable may change from measurement to measurement.
+- A **value** is the state of a variable when you measure it. The value of a variable may change from measurement to measurement.
 
--   An **observation** is a set of measurements made under similar conditions (you usually make all of the measurements in an observation at the same time and on the same object). An observation will contain several values, each associated with a different variable. We'll sometimes refer to an observation as a data point.
+- An **observation** is a set of measurements made under similar conditions (you usually make all of the measurements in an observation at the same time and on the same object). An observation will contain several values, each associated with a different variable. We'll sometimes refer to an observation as a data point.
 
--   **Tabular data** is a set of values, each associated with a variable and an observation. Tabular data is *tidy* if each value is placed in its own "cell", each variable in its own column, and each observation in its own row.
+- **Tabular data** is a set of values, each associated with a variable and an observation. Tabular data is *tidy* if each value is placed in its own "cell", each variable in its own column, and each observation in its own row.
 
 In this context, a variable refers to an attribute of all the college students, and an observation refers to all the attributes of a single college student.
 
@@ -131,15 +131,15 @@ Among the variables
 
 Before we begin, write down you predictions:
 
--   Do you predict that mindfullness is positively or negatively related to happiness? Very strongly related, moderately, weakly, or not at all?
+- Do you predict that mindfullness is positively or negatively related to happiness? Very strongly related, moderately, weakly, or not at all?
 
--   Do you predict that social media use will be positively or negatively related to happiness? Very strongly, moderately, weakly, or not at all?
+- Do you predict that social media use will be positively or negatively related to happiness? Very strongly, moderately, weakly, or not at all?
 
--   Do you believe that those who identify as women would have different relationships to happiness than those who identify as woemen? What about those who marked 'other'?
+- Do you believe that those who identify as women would have different relationships to happiness than those who identify as woemen? What about those who marked 'other'?
 
 ### Ultimate goal {#sec-ultimate-goal}
 
-Our ultimate goal in this chapter is to recreate the following visualization displaying the relationship between flipper lengths and body masses of these penguins, taking into consideration the species of the penguin.
+Our ultimate goal in this chapter is to recreate the following visualization displaying the relationship between happiness and mindfullness, broken down by gender.
 
 ```{r}
 #| echo: false
@@ -304,7 +304,7 @@ ggplot(
   labs(
     title = "Mindfulness and Happiness",
     subtitle = "For those identifying as male, female, or other",
-    x = "MIndfullness (1-7)",
+    x = "Mindfullness (1-7)",
     y = "Happiness (1-7)",
     color = "Gender",
     shape = "Gender"
@@ -466,11 +466,11 @@ To visualize a relationship we need to have at least two variables mapped to aes
 
 To visualize the relationship between a numerical and a categorical variable we can use side-by-side box plots. A **boxplot** is a type of visual shorthand for measures of position (percentiles) that describe a distribution. It is also useful for identifying potential outliers. As shown in @fig-eda-boxplot, each boxplot consists of:
 
--   A box that indicates the range of the middle half of the data, a distance known as the interquartile range (IQR), stretching from the 25th percentile of the distribution to the 75th percentile. In the middle of the box is a line that displays the median, i.e. 50th percentile, of the distribution. These three lines give you a sense of the spread of the distribution and whether or not the distribution is symmetric about the median or skewed to one side.
+- A box that indicates the range of the middle half of the data, a distance known as the interquartile range (IQR), stretching from the 25th percentile of the distribution to the 75th percentile. In the middle of the box is a line that displays the median, i.e. 50th percentile, of the distribution. These three lines give you a sense of the spread of the distribution and whether or not the distribution is symmetric about the median or skewed to one side.
 
--   Visual points that display observations that fall more than 1.5 times the IQR from either edge of the box. These outlying points are unusual so are plotted individually.
+- Visual points that display observations that fall more than 1.5 times the IQR from either edge of the box. These outlying points are unusual so are plotted individually.
 
--   A line (or whisker) that extends from each end of the box and goes to the farthest non-outlier point in the distribution.
+- A line (or whisker) that extends from each end of the box and goes to the farthest non-outlier point in the distribution.
 
 ```{r}
 #| label: fig-eda-boxplot
@@ -522,8 +522,8 @@ ggplot(eammi2, aes(x = Stress, color = sex, fill = sex)) +
 
 Note the terminology we have used here:
 
--   We *map* variables to aesthetics if we want the visual attribute represented by that aesthetic to vary based on the values of that variable.
--   Otherwise, we *set* the value of an aesthetic.
+- We *map* variables to aesthetics if we want the visual attribute represented by that aesthetic to vary based on the values of that variable.
+- Otherwise, we *set* the value of an aesthetic.
 
 ### Two categorical variables
 
@@ -676,9 +676,9 @@ Generally, however, we recommend that you assemble your final reports using Quar
 
 ## Common problems
 
-As you start to run R code, you're likely to run into problems. Don't worry --- it happens to everyone. We have all been writing R code for years, but every day we still write code that doesn't work on the first try!
+As you start to run R code, you're likely to run into problems. Don't worry --- it happens to everyone. No matter how long you've been writing R code, it is very common to write code that does not work on the first try!
 
-Start by carefully comparing the code that you're running to the code in the book. R is extremely picky, and a misplaced character can make all the difference. Make sure that every `(` is matched with a `)` and every `"` is paired with another `"`. Sometimes you'll run the code and nothing happens. Check the left-hand of your console: if it's a `+`, it means that R doesn't think you've typed a complete expression and it's waiting for you to finish it. In this case, it's usually easy to start from scratch again by pressing ESCAPE to abort processing the current command.
+Start by carefully comparing the code that you're running to the code examples you are working from. R is extremely picky, and a misplaced character can make all the difference. Make sure that every `(` is matched with a `)` and every `"` is paired with another `"`. Sometimes you'll run the code and nothing happens. Check the left-hand of your console: if it's a `+`, it means that R doesn't think you've typed a complete expression and it's waiting for you to finish it. In this case, it's usually easy to start from scratch again by pressing ESCAPE to abort processing the current command.
 
 One common problem when creating ggplot2 graphics is to put the `+` in the wrong place: it has to come at the end of the line, not the start. In other words, make sure you haven't accidentally written code like this:
 

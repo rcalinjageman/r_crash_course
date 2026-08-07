@@ -10,37 +10,35 @@ Let's get to know each other!
 
 This is a crash-course in R:
 
--   We meet Monday through Friday 9am to 4pm; lunch from 11:30 - 12:30; snack at 2:30
+- We meet Monday through Friday 9am to 2pm; lunch from 11:30 - 12:30
 
--   **Please be on time**
+- **Please be on time**
 
--   **I will take attendance before and after lunch**
-
--   We will get out early on Friday (by 2pm); *perhaps* a few minutes early on other days
+- **I will take attendance before and after lunch**
 
 ### Project
 
 This course culminates in a project - a website and poster presenting your question and answer from a data set you care about:
 
--   During this week we'll work on helping you identify a data set and question (or questions)
+- During this week we'll work on helping you identify a data set and question (or questions)
 
--   You will write R code to load your data, clean up any data issues, and produce 1-2 visualizations per research question
+- You will write R code to load your data, clean up any data issues, and produce 1-2 visualizations per research question
 
--   You will write your R code using Quarto, enabling you to publish your project to a GitHub website
+- You will write your R code using Quarto, enabling you to publish your project to a GitHub website
 
--   You will also export your images and create a poster for presentation at DU's mini expo
+- You will also export your images and create a poster for presentation at DU's mini expo
 
 ### Expectations
 
--   Be on time
+- Be on time
 
--   Be engaged
+- Be engaged
 
--   Support each other
+- Support each other
 
--   Talk to me about any issues/concerns
+- Talk to me about any issues/concerns
 
--   Expect some frustration - give me, your classmates, and yourself some grace – learning R is not always easy, but it can be very rewarding.
+- Expect some frustration - give me, your classmates, and yourself some grace – learning R is not always easy, but it can be very rewarding.
 
 ## Why learn R?
 
@@ -54,11 +52,11 @@ In some ways, this makes learning R more difficult than learning other programmi
 
 It's worth pausing for a moment to discuss:
 
--   What are some examples of asking/answering questions of data in our society?
+- What are some examples of asking/answering questions of data in our society?
 
--   What professions leverage data regularly?
+- What professions leverage data regularly?
 
--   What, specifically, attracts you to learning these skills?
+- What, specifically, attracts you to learning these skills?
 
 ## Some credit where credit is due
 

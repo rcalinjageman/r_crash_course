@@ -15,7 +15,7 @@ Use comments and code to work through this assignment. (e.g. make a comment like
 
 At the outset, you'll need to load ggplot2 and dplyr. You can load both with:
 
-``` R
+``` r
 library(tidyverse)
 ```
 
@@ -23,7 +23,7 @@ These questions use the college_survey data set. This is a survey of Dominican U
 
 Load this data with:
 
-``` R
+``` r
 college_survey <- read.csv("college_survey.csv")
 ```
 
@@ -131,9 +131,9 @@ Raven_Score
         \
         Add a fit line with geom_smooth\
         \
-        Notice the extreme impact of an outlier who claims to have a GPA of less than 1. That doesn't seem totally credible. Use the filter function from dplyr to make the same plot but only with participants who have GPAs \> 1. \
+        Notice the extreme impact of an outlier who claims to have a GPA of less than 1. That doesn't seem totally credible. Use the filter function from dplyr to make the same plot but only with participants who have GPAs \> 1.\
         \
-        CHALLENGE: Notice the person who says they had a 36 ACT? That's a perfect score. WOW! Can you highlight this one point on the graph? See section 10.3 of Layers for an example. \
+        CHALLENGE: Notice the person who says they had a 36 ACT? That's a perfect score. WOW! Can you highlight this one point on the graph? See section 10.3 of Layers for an example.\
         \
         Set the dots to be a nicer color, size, and shape ("square filled" is a good shape; see Layers for all the shapes; you can specify them by their name or their number). Apply these globally; not through mapping a variable. Make your line of best fit match.\
         \
@@ -167,7 +167,7 @@ Raven_Score
         \
         CHALLENGE: TRUE and FALSE is not super readable for an outside user. Can you use mutate and the case_when function to create a Student_Athlete_Better_Code variable that uses "Athlete" and "Non Athlete" as its labels? Here's an example of using mutate to recode a categorical variable... can you adapt it for your needs?
 
-        ``` R
+        ``` r
         mutate(
             drive_type = case_when(
               drv == "f" ~ "front-wheel drive",
@@ -183,11 +183,11 @@ Raven_Score
         \
         Think about how GPAs work. Do you see any problems with density ridges and how they present data?
 
-    5.  Repeat question 5 but using stat_summary to give the min, max, and median gpa for athletes and non-athletes. You'll probably want to switch GPA to the y axis and Student_Athlete_Code to the x axis. You won't need to map color or fill to athlete status. But you will \
+    5.  Repeat question 5 but using stat_summary to give the min, max, and median gpa for athletes and non-athletes. You'll probably want to switch GPA to the y axis and Student_Athlete_Code to the x axis. You won't need to map color or fill to athlete status. But you will\
         \
         Here's an example from class where we used stat_summary.
 
-        ``` R
+        ``` r
         ggplot(diamonds) + 
           stat_summary(
             aes(x = cut, y = depth),
@@ -201,6 +201,6 @@ Raven_Score
         \
         Challenge: Make an addition graph using the Student_Athlete variable that notes if the athlete is in-season or out of season.
 
-    6.   Come up with your own question for this data set. This question should be about the relationship between 2 quantititative variables, and you should break the relationship down by a categorical variable using either a mapping of facets. Pretty up your graph and write a conclusion.
+    6.  Come up with your own question for this data set. This question should be about the relationship between 2 quantititative variables, and you should break the relationship down by a categorical variable using either a mapping of facets. Pretty up your graph and write a conclusion.
 
     7.  Come up with another question for this data set. This one should compare groups from a categorical variable on a quantitative variable (e.g. is happiness different for athletes vs. non-athletes?). You might need to do some filtering or re-coding.\
