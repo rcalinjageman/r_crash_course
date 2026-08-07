@@ -8,31 +8,33 @@ source("_common.R")
 
 It's day 1! Excitement is high. Here's the plan for today:
 
--   Course Business: @sec-day-1-intro
+- Course Business: @sec-day-1-intro
 
-    -   Get to know each other
+  - Get to know each other
 
-    -   Course organization and rules
+  - Course organization and rules
 
-    -   Why learn R and data science?
+  - Why learn R and data science?
 
--   Jump in
+- Jump in
 
-    -   @sec-day-1-whole-game
+  - @sec-day-1-whole-game
 
-    -   @sec-day-1-first-graph
+  - @sec-day-1-first-graph
 
--   Coding basics
+- Coding basics
 
-    -   @sec-day-1-r-basics
+  - @sec-day-1-r-basics
 
-    -   @sec-day-1-style
+  - @sec-day-1-style
 
-    -   @sec-day-1-scripts
+  - @sec-day-1-scripts
 
-    -   @sec-day-help
+  - @sec-day-help
 
--   Assignments
+- Assignments
+
+  - @sec-day-1-assignments
 
 We're assuming that everyone has created their Posit.Cloud account and their Github Account. If not, please check out the instructions on the getting started page .
 

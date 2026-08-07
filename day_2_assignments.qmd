@@ -1,4 +1,4 @@
-# D2 Assignment {#sec-day-1-assignments}
+# D2 Assignment {#sec-day-2-assignment}
 
 ```{r}
 #| echo: false

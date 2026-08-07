@@ -1,3 +1,21 @@
 ---
 title: "Day 2"
 ---
+
+Welcome to Day 2 of our R course!
+
+Today we are going to learn about:
+
+-  @sec-day-2-data-transform
+
+- @sec-day-2-layers
+
+And depending on how things go we may also discuss:
+
+- @sec-day-2-exploratory-data-analysis
+
+- @sec-day-2-communication
+
+And we'll work on an assignment to help pull our different skills together: @sec-day-2-assignment
+
+Exciting!

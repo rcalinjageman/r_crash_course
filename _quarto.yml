@@ -8,7 +8,7 @@ book:
   
   page-footer:
     left: |
-      Adapted heavily from R for Data Science (2e) by Hadley Wickham, Mine
+      Adapted (stolen?) from R for Data Science (2e) by Hadley Wickham, Mine
       Çetinkaya-Rundel, and Garrett Grolemund.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
@@ -16,7 +16,7 @@ book:
   cover-image: '/resources/logo.png'
   site-url: https://rcalinjageman.github.io/r_crash_course/
   repo-url: https://github.com/rcalinjageman/r_crash_course
-  repo-branch: meain
+  repo-branch: main
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
